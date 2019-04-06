@@ -1,0 +1,114 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IRCWindow.Properties" GeneratedClassName="UISettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TopicFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Arial, 12.75pt</Value>
+    </Setting>
+    <Setting Name="DateTimeFormat" Type="System.String" Scope="User">
+      <Value Profile="(Default)">[HH:mm:ss]</Value>
+    </Setting>
+    <Setting Name="QuitMessage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CIRCe by Vladimir Khil</Value>
+    </Setting>
+    <Setting Name="ChatFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 11.25pt</Value>
+    </Setting>
+    <Setting Name="ChatBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">GhostWhite</Value>
+    </Setting>
+    <Setting Name="PrintFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Arial, 12.75pt</Value>
+    </Setting>
+    <Setting Name="PrintBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">GhostWhite</Value>
+    </Setting>
+    <Setting Name="TopicBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Lavender</Value>
+    </Setting>
+    <Setting Name="UsersFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Segoe UI, 11.25pt</Value>
+    </Setting>
+    <Setting Name="UsersBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">GhostWhite</Value>
+    </Setting>
+    <Setting Name="TreeFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Segoe UI, 9.75pt, style=Bold, Italic</Value>
+    </Setting>
+    <Setting Name="TreeBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Azure</Value>
+    </Setting>
+    <Setting Name="MessagesColor" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ServerConnectedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="ServerDisconnectedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="SelfOnChannelBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Thistle</Value>
+    </Setting>
+    <Setting Name="SelfOnChannelForeColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="IRCWindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">819, 509</Value>
+    </Setting>
+    <Setting Name="LogMode" Type="IRCProviders.LogMode" Scope="User">
+      <Value Profile="(Default)">Txt</Value>
+    </Setting>
+    <Setting Name="PlayMusic" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PutRegisterMessage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowUrlOnCmd" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowReadSplitters" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="OpenPrivateVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PlayMusicExt" Type="IRCProviders.PlayMode" Scope="User">
+      <Value Profile="(Default)">All</Value>
+    </Setting>
+    <Setting Name="UrlExt" Type="IRCProviders.PlayMode" Scope="User">
+      <Value Profile="(Default)">All</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.Globalization.CultureInfo" Scope="User">
+      <Value Profile="(Default)">(Default)</Value>
+    </Setting>
+    <Setting Name="PingServer" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
+    <Setting Name="WaitServer" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="SavePasswords" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="FlashingParams" Type="IRCProviders.FlashParams" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;FlashParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FlashingMode&gt;Meduim&lt;/FlashingMode&gt;
+  &lt;FlashOnNick&gt;true&lt;/FlashOnNick&gt;
+  &lt;FlashOnPrivate&gt;true&lt;/FlashOnPrivate&gt;
+  &lt;UseBlackList&gt;false&lt;/UseBlackList&gt;
+  &lt;UseWhiteList&gt;false&lt;/UseWhiteList&gt;
+  &lt;BlackList /&gt;
+  &lt;WhiteList /&gt;
+&lt;/FlashParams&gt;</Value>
+    </Setting>
+    <Setting Name="NotifyOnCtcp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NotifyOnNoMedia" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

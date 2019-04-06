@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CA85C25-3008-4CD4-8767-EE0BE0BF6586}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIIRC</RootNamespace>
+    <AssemblyName>SIIRC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\IRCWindow\bin\Debug\AddOns\SI</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\IRCWindow\bin\Release\AddOns\SI\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SIPackages, Version=5.0.5.0, Culture=neutral, PublicKeyToken=4be120a55c5e67bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\SIPackages.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandPanel.Designer.cs">
+      <DependentUpon>CommandPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameConfiguration.cs" />
+    <Compile Include="InputNumDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputNumDialog.Designer.cs">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizedCategoryAttribute.cs" />
+    <Compile Include="LocalizedDescriptionAttribute.cs" />
+    <Compile Include="LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageStoreForm.Designer.cs">
+      <DependentUpon>PackageStoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PackageTreeViewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PackageTreeViewDialog.Designer.cs">
+      <DependentUpon>PackageTreeViewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerList.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SIService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UpdateService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SIAddon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpForm.designer.cs">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimerDurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimerDurationDialog.Designer.cs">
+      <DependentUpon>TimerDurationDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CIRCe.Base\CIRCe.Base.csproj">
+      <Project>{70710803-D937-487D-8CF6-B0E87D76D4B8}</Project>
+      <Name>CIRCe.Base</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IRC.Client.Base\IRC.Client.Base.csproj">
+      <Project>{A549B201-BDAF-4F7F-9FEE-9BC3FF3BD78E}</Project>
+      <Name>IRC.Client.Base</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+    <None Include="Properties\DataSources\System.Uri.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SIService\si.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIService\si1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIService\si2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIService\si3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SIService\SIIRC.SIService.Package.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIService\SIIRC.SIService.PackageCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SIService\SIService1.wsdl" />
+    <None Include="Service References\UpdateService\update.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\update1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\update2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\UpdateService1.wsdl" />
+    <None Include="ygpackage3.1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommandPanel.en-US.resx">
+      <DependentUpon>CommandPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandPanel.resx">
+      <DependentUpon>CommandPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputNumDialog.en-US.resx">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputNumDialog.resx">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en-US.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageStoreForm.resx">
+      <DependentUpon>PackageStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageTreeViewDialog.en-US.resx">
+      <DependentUpon>PackageTreeViewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PackageTreeViewDialog.resx">
+      <DependentUpon>PackageTreeViewDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx" />
+    <EmbeddedResource Include="StartUpForm.en-US.resx">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpForm.resx">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerDurationDialog.en-US.resx">
+      <DependentUpon>TimerDurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimerDurationDialog.resx">
+      <DependentUpon>TimerDurationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SIService\configuration.svcinfo" />
+    <None Include="Service References\SIService\configuration91.svcinfo" />
+    <None Include="Service References\UpdateService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UpdateService\configuration.svcinfo" />
+    <None Include="Service References\UpdateService\configuration91.svcinfo" />
+    <None Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SIService\" />
+    <WCFMetadataStorage Include="Service References\UpdateService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SIService\si.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UpdateService\update.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dlls\SIPackages.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

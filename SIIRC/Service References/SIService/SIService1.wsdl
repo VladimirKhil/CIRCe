@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/si?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/si?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/si?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VladimirKhil.Models" />
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/si?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISIService_SendGameReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendGameReport" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_SendGameReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendGameReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackages" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackage" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackagesByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagesByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackagesByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackagesByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackageByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackageByID" />
+  </wsdl:message>
+  <wsdl:message name="ISIService_GetPackageByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPackageByIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISIService">
+    <wsdl:operation name="SendGameReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/SendGameReport" message="tns:ISIService_SendGameReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/SendGameReportResponse" message="tns:ISIService_SendGameReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackages">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/GetPackages" message="tns:ISIService_GetPackages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/GetPackagesResponse" message="tns:ISIService_GetPackages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/GetPackage" message="tns:ISIService_GetPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/GetPackageResponse" message="tns:ISIService_GetPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/GetCategories" message="tns:ISIService_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/GetCategoriesResponse" message="tns:ISIService_GetCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagesByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/GetPackagesByCategory" message="tns:ISIService_GetPackagesByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/GetPackagesByCategoryResponse" message="tns:ISIService_GetPackagesByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackageByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISIService/GetPackageByID" message="tns:ISIService_GetPackageByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISIService/GetPackageByIDResponse" message="tns:ISIService_GetPackageByID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISIService" type="tns:ISIService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendGameReport">
+      <soap:operation soapAction="http://tempuri.org/ISIService/SendGameReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackages">
+      <soap:operation soapAction="http://tempuri.org/ISIService/GetPackages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackage">
+      <soap:operation soapAction="http://tempuri.org/ISIService/GetPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tempuri.org/ISIService/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackagesByCategory">
+      <soap:operation soapAction="http://tempuri.org/ISIService/GetPackagesByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackageByID">
+      <soap:operation soapAction="http://tempuri.org/ISIService/GetPackageByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SIService">
+    <wsdl:port name="BasicHttpBinding_ISIService" binding="tns:BasicHttpBinding_ISIService">
+      <soap:address location="http://vladimirkhil.com/services/si" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

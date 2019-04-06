@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <assemblyIdentity version="1.0.0.0" name="MyApplication.app"/>
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <addon>
+    <!--Замените строку на название dll, хранящей аддон-->
+    <path>CIRCeAddonTemplate.dll</path>
+    <!--Замените строку на название объекта в dll, являющегося аддоном-->
+    <startFullType>CIRCeAddonTemplate.Addon</startFullType>
+    <!--Замените строку на название аддона, которое будет отображаться в меню-->
+    <title>Название аддона</title>
+    <!--Замените строку на описание аддона, которое будет всплывать при наведении мышью на аддон-->
+    <description>Описание аддона</description>
+    <!--Замените строку на своё имя-->
+    <author>Имя автора</author>
+    <!--Режим запуска аддона: автоматический (Automatic) или ручной (Manual)-->
+    <startMode>Manual</startMode>
+    <!--Будет ли аддон изначально виден в меню (True / False)-->
+    <menuVisible>True</menuVisible>
+    <!--Сгенерируйте уникальный иденификатор для своего аддона и впишите его сюда-->
+    <guid>00000000-0000-0000-0000-000000000000</guid>
+  </addon>
+</asmv1:assembly>

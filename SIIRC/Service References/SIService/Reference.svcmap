@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="897b01be-2263-4040-9fa3-168926ea6bf0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vladimirkhil.com/services/si" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="si.xsd" MetadataType="Schema" ID="4a44bf35-26d8-40f0-b196-d17b3328518d" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?xsd=xsd3" />
+    <MetadataFile FileName="si1.xsd" MetadataType="Schema" ID="2201b288-cbf5-42fc-827d-c19fe1ec4ef0" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?xsd=xsd1" />
+    <MetadataFile FileName="SIService1.wsdl" MetadataType="Wsdl" ID="d18ff483-f96a-491c-86c1-37f0ecc07f6e" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?wsdl" />
+    <MetadataFile FileName="si.disco" MetadataType="Disco" ID="605d620e-f6ed-4b51-9f98-03c6060c61fb" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?disco" />
+    <MetadataFile FileName="si2.xsd" MetadataType="Schema" ID="da3580a7-7258-444e-aef7-2fb2dc786a36" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?xsd=xsd2" />
+    <MetadataFile FileName="si3.xsd" MetadataType="Schema" ID="6dca46d7-2c9f-46de-a8c2-29b4731bad8b" SourceId="1" SourceUrl="http://vladimirkhil.com/services/si?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

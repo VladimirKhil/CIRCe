@@ -1,0 +1,1179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IRCProviders</name>
+    </assembly>
+    <members>
+        <member name="T:IRCProviders.IPrivateWindow">
+            <summary>
+            Базовый интерфейс для окна привата
+            </summary>
+        </member>
+        <member name="T:IRCProviders.ICommunicationWindow">
+            <summary>
+            Базовое окно для общения
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IBaseWindow">
+            <summary>
+            Базовый интерфейс окна клиента
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.Close">
+            <summary>
+            Закрыть окно
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.Echo(System.String)">
+            <summary>
+            Просто вывести текст в окно
+            </summary>
+            <param name="text">Выводимый текст</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String,System.Drawing.Color)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+            <param name="defColor">Цвет по умолчанию</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String,System.Int32)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+            <param name="defColorIndex">Код цвета по умолчанию</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+            <param name="defColorIndex">Код цвета по умолчанию</param>
+            <param name="putTime">Указать ли время добалвения сообщения</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String,System.Drawing.Color,System.Boolean)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+            <param name="defColor">Цвет по умолчанию</param>
+            <param name="putTime">Указать ли время добалвения сообщения</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.PutMessage(System.String,System.Drawing.Color,System.Boolean,IRCProviders.MessageType)">
+            <summary>
+            Добавить текст сообщения в окно сообщений
+            </summary>
+            <param name="msgText">Текст сообщения</param>
+            <param name="defColor">Цвет по умолчанию</param>
+            <param name="putTime">Указать ли время добалвения сообщения</param>
+            <param name="messageType">Тип публикуемого сообщения</param>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.ActivateWindow">
+            <summary>
+            Активировать окно
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IBaseWindow.Focus">
+            <summary>
+            Передать фокус окну
+            </summary>
+            <returns>Успешность операции</returns>
+        </member>
+        <member name="P:IRCProviders.IBaseWindow.Self">
+            <summary>
+            Форма окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IBaseWindow.ChatPanel">
+            <summary>
+            Панель чата
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IBaseWindow.InputPanel">
+            <summary>
+            Панель ввода сообщения
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IBaseWindow.ServerWindow">
+            <summary>
+            Сервер, к которому относится данное окно
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IBaseWindow.InputKeyDown">
+            <summary>
+            Пользователь нажал клавишу
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IBaseWindow.InputKeyPress">
+            <summary>
+            Пользователь нажал символьную клавишу
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IBaseWindow.Disposed">
+            <summary>
+            Окно закрылось
+            </summary>
+        </member>
+        <member name="M:IRCProviders.ICommunicationWindow.Action(System.String)">
+            <summary>
+            Вывести информацию о своём действии на канале (команда /me)
+            </summary>
+            <param name="actionText">Описание действия</param>
+        </member>
+        <member name="M:IRCProviders.ICommunicationWindow.PutTextMessage(System.String,System.String)">
+            <summary>
+            Записать в чат обычное сообщение
+            </summary>
+            <param name="name">Отправитель</param>
+            <param name="text">Текст сообщения</param>
+        </member>
+        <member name="M:IRCProviders.ICommunicationWindow.HasPerson(System.String)">
+            <summary>
+            Содержит ли имя пользователя
+            </summary>
+            <param name="name">Имя</param>
+            <returns>Содержит ли имя данного пользователя</returns>
+        </member>
+        <member name="P:IRCProviders.ICommunicationWindow.OwnerServerWindow">
+            <summary>
+            Окно сервера, к которому принадлежит канал текущего окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.ICommunicationWindow.WindowName">
+            <summary>
+            Имя окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.ICommunicationWindow.ReceiverName">
+            <summary>
+            Имя получателя сообщений
+            </summary>
+        </member>
+        <member name="E:IRCProviders.ICommunicationWindow.PersonJoined">
+            <summary>
+            Пользователь присоединился к окну
+            </summary>
+        </member>
+        <member name="E:IRCProviders.ICommunicationWindow.PersonLeaved">
+            <summary>
+            Пользователь вышел
+            </summary>
+        </member>
+        <member name="E:IRCProviders.ICommunicationWindow.MessageReceived">
+            <summary>
+            Получено сообщение
+            </summary>
+        </member>
+        <member name="E:IRCProviders.ICommunicationWindow.Cmd">
+            <summary>
+            Введена команда
+            </summary>
+        </member>
+        <member name="F:IRCProviders.IRCForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:IRCProviders.IRCForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCForm.DeactivateMe">
+            <summary>
+            Возникает при деактивации окна
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCForm.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Стандартная процедура обработки сообщений
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="P:IRCProviders.IRCForm.Id">
+            <summary>
+            Идентификатор окна (желательно, уникальный)
+            </summary>
+        </member>
+        <member name="T:IRCProviders.WindowInfo">
+            <summary>
+            Информация о расположении и размере окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.WindowInfo.Id">
+            <summary>
+            Идентификатор окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.WindowInfo.Location">
+            <summary>
+            Позиция окна
+            </summary>
+        </member>
+        <member name="P:IRCProviders.WindowInfo.Size">
+            <summary>
+            Размер окна
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IRCAddon">
+            <summary>
+            Класс, от которого нужно наследовать, чтобы подключить аддон к IRC-клиенту
+            При запуске аддона через функцию Run передаётся ссылка на главное окно приложения
+            Изменяя свойства, вызывая методы и подписываясь на события главного окна, можно взаимодействовать с приложением
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCAddon.Run(IRCProviders.IMainWindow)">
+            <summary>
+            Запуск аддона
+            </summary>
+            <param name="mainWindow">Интерфейс вызывающего приложения (Цирцеи)</param>
+        </member>
+        <member name="M:IRCProviders.IRCAddon.IsUpdateNeeded">
+            <summary>
+            Нужно ли аддону обновление
+            </summary>
+            <returns>Да, если нужно, и нет в противном случае</returns>
+        </member>
+        <member name="M:IRCProviders.IRCAddon.GetUpdateUri">
+            <summary>
+            Получить URI файла, который нужно скачать для обновления аддона
+            </summary>
+            <returns>URI файла с обновлением</returns>
+        </member>
+        <member name="E:IRCProviders.IRCAddon.Stop">
+            <summary>
+            Событие остановки аддона
+            </summary>
+        </member>
+        <member name="T:IRCProviders.MessageType">
+            <summary>
+            Тип сообщения для печати
+            </summary>
+        </member>
+        <member name="F:IRCProviders.MessageType.Replic">
+            <summary>
+            Реплика
+            </summary>
+        </member>
+        <member name="F:IRCProviders.MessageType.UserEvent">
+            <summary>
+            Событие пользователей
+            </summary>
+        </member>
+        <member name="F:IRCProviders.MessageType.ChannelEvent">
+            <summary>
+            Событие каналов
+            </summary>
+        </member>
+        <member name="F:IRCProviders.MessageType.NotifyEvent">
+            <summary>
+            Оповещения
+            </summary>
+        </member>
+        <member name="T:IRCProviders.TwoPersonsEventArgs">
+            <summary>
+            Событие, касающееся двух (имён) пользователей
+            </summary>
+        </member>
+        <member name="T:IRCProviders.PersonEventArgs">
+            <summary>
+            Информация о пользователе
+            </summary>
+        </member>
+        <member name="P:IRCProviders.PersonEventArgs.NickName">
+            <summary>
+            Ник
+            </summary>
+        </member>
+        <member name="M:IRCProviders.TwoPersonsEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Создание события
+            </summary>
+            <param name="nickName">Первый ник</param>
+            <param name="anotherNickName">Второй ник</param>
+        </member>
+        <member name="P:IRCProviders.TwoPersonsEventArgs.AnotherNickName">
+            <summary>
+            Второй участник событий
+            </summary>
+        </member>
+        <member name="T:IRCProviders.CharCharDictionary">
+            <summary>
+            Словарь соответствий между символами
+            </summary>
+        </member>
+        <member name="T:IRCProviders.FlashParams">
+            <summary>
+            Параметры мигания
+            </summary>
+        </member>
+        <member name="T:IRCProviders.AddonInfoList">
+            <summary>
+            Список настроек аддонов
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IWindowTree">
+            <summary>
+            Дерево окон в программе
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IWindowTree.BackColor">
+            <summary>
+            Цвет фона
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IWindowTree.NodeBackColorLeft">
+            <summary>
+            Цвет фона узла (левый)
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IWindowTree.NodeBackColorRight">
+            <summary>
+            Цвет фона узла (правый)
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IWindowTree.SelectedNodeBackColorLeft">
+            <summary>
+            Цвет фона выделенного узла (левый)
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IWindowTree.SelectedNodeColorRight">
+            <summary>
+            Цвет фона выделенного узла (правый)
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IFormNode">
+            <summary>
+            Узел в дереве, представляющий форму
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IFormNode.ForeColor">
+            <summary>
+            Цвет текста узла
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IFormNode.Image">
+            <summary>
+            Картинка узла
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IContextMenuStrip">
+            <summary>
+            Контекстное меню
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IContextMenuStrip.Add(System.Windows.Forms.ToolStripItem)">
+            <summary>
+            Добавить пункт меню
+            </summary>
+            <param name="item">Добавляемый пункт меню</param>
+        </member>
+        <member name="M:IRCProviders.IContextMenuStrip.IndexOf(System.Windows.Forms.ToolStripItem)">
+            <summary>
+            Получить номер позиции пункта меню в данном меню
+            </summary>
+            <param name="item">Пункт меню</param>
+            <returns>Позиция переданного пункта</returns>
+        </member>
+        <member name="M:IRCProviders.IContextMenuStrip.Remove(System.Windows.Forms.ToolStripItem)">
+            <summary>
+            Удалить пункт меню
+            </summary>
+            <param name="item">Удаляемый пункт</param>
+        </member>
+        <member name="M:IRCProviders.IContextMenuStrip.RemoveAt(System.Int32)">
+            <summary>
+            Удалить пункт меню по индексу
+            </summary>
+            <param name="index">Индекс пункта меню</param>
+        </member>
+        <member name="E:IRCProviders.IContextMenuStrip.Opening">
+            <summary>
+            Возникает перед открытием меню
+            </summary>
+        </member>
+        <member name="T:IRCProviders.Colors">
+            <summary>
+            Цвета IRC
+            </summary>
+        </member>
+        <member name="M:IRCProviders.Colors.CreateRtfColorTable">
+            <summary>
+            Создать таблицу цветов в формате RTF на основе текущих цветовых настроек
+            </summary>
+            <returns>Созданная цветовая таблица</returns>
+        </member>
+        <member name="M:IRCProviders.Colors.#ctor">
+            <summary>
+            Создание настроек цветов
+            </summary>
+        </member>
+        <member name="M:IRCProviders.Colors.IndexOf(System.Drawing.Color)">
+            <summary>
+            Получить индекс цвета в таблице цветов
+            </summary>
+            <param name="color">Цвет</param>
+            <returns>Индекс цвета в таблице цветов или -1, если цвет не был найден</returns>
+        </member>
+        <member name="M:IRCProviders.Colors.MakeDefault">
+            <summary>
+            Установить в таблице значения цветов по умолчанию
+            </summary>
+        </member>
+        <member name="M:IRCProviders.Colors.Clone">
+            <summary>
+            Клонировать цветовую таблицу
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IRCProviders.Colors.Save(System.String)">
+            <summary>
+            Сохранить палитру цветов в файл
+            </summary>
+            <param name="fileName">Имя файла для сохранения</param>
+        </member>
+        <member name="M:IRCProviders.Colors.Save(System.Text.StringBuilder)">
+            <summary>
+            Сохранить палитру цветов в строку
+            </summary>
+            <param name="str">Строка для сохранения</param>
+        </member>
+        <member name="M:IRCProviders.Colors.Load(System.String)">
+            <summary>
+            Загрузить палитры цветов из файла
+            </summary>
+            <param name="fileName">Имя файла для загрузки</param>
+        </member>
+        <member name="M:IRCProviders.Colors.Load(System.Text.StringBuilder)">
+            <summary>
+            Загрузить палитры цветов из строки
+            </summary>
+            <param name="fileName">Строка для загрузки</param>
+        </member>
+        <member name="M:IRCProviders.Colors.Load(System.Xml.XmlReader)">
+            <summary>
+            Загрузить цветовую таблицу из xml
+            </summary>
+            <param name="reader">Источник xml</param>
+        </member>
+        <member name="P:IRCProviders.Colors.ColorList">
+            <summary>
+            Список цветов в данной настройке приложения
+            </summary>
+        </member>
+        <member name="P:IRCProviders.Colors.Length">
+            <summary>
+            Количество цветов
+            </summary>
+        </member>
+        <member name="P:IRCProviders.Colors.Item(System.Int32)">
+            <summary>
+            Цвет по индексу
+            </summary>
+            <param name="i">Индекс цвета</param>
+            <returns></returns>
+        </member>
+        <member name="P:IRCProviders.Colors.DefForeColor">
+            <summary>
+            Цвет по умолчанию
+            </summary>
+        </member>
+        <member name="P:IRCProviders.Colors.DefBackColor">
+            <summary>
+            Цвет фона по умолчанию
+            </summary>
+        </member>
+        <member name="T:IRCProviders.FormattedText">
+            <summary>
+            Форматированный текст
+            </summary>
+        </member>
+        <member name="M:IRCProviders.FormattedText.#ctor">
+            <summary>
+            Создание форматированнного текста
+            </summary>
+        </member>
+        <member name="M:IRCProviders.FormattedText.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Создание форматированнного текста
+            </summary>
+            <param name="original">Строка, из которой следует сформировтаь текст</param>
+            <param name="defForeColorIndex">Индекс цвета текста по умолчнию</param>
+            <param name="defBackColorIndex">Индекс цвета фона по умолчанию</param>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Original">
+            <summary>
+            Строка, из которой был сформирован данный текст
+            </summary>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Text">
+            <summary>
+            Чистый текст
+            </summary>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Colors">
+            <summary>
+            Метки цветов в тексте
+            </summary>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Bold">
+            <summary>
+            Метки жирности в тексте
+            </summary>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Under">
+            <summary>
+            Метки подчёркивания в тексте
+            </summary>
+        </member>
+        <member name="P:IRCProviders.FormattedText.Rev">
+            <summary>
+            Метки реверсивности в тексте
+            </summary>
+        </member>
+        <member name="T:IRCProviders.MessageEventArgs">
+            <summary>
+            Параметры полученного сообщения
+            </summary>
+        </member>
+        <member name="M:IRCProviders.MessageEventArgs.#ctor(System.String,System.String)">
+            <summary>
+            Создать параметры сообщения
+            </summary>
+            <param name="message">Текст сообщения</param>
+            <param name="sender">Отправитель</param>
+        </member>
+        <member name="P:IRCProviders.MessageEventArgs.Message">
+            <summary>
+            Текст сообщения
+            </summary>
+        </member>
+        <member name="P:IRCProviders.MessageEventArgs.Sender">
+            <summary>
+            Отправитель
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IListView">
+            <summary>
+            Список из элементов
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IListView.LVItems">
+            <summary>
+            Массив элементов
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IListView.LVSelectedItems">
+            <summary>
+            Массив выбранных элементов
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IListView.LVContextMenu">
+            <summary>
+            Контекстное меню
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IListView.Item(System.String)">
+            <summary>
+            Строка пользователя
+            </summary>
+            <param name="nickName">Имя пользователя</param>
+            <returns>Строка пользователя</returns>
+        </member>
+        <member name="T:IRCProviders.IServerWindow">
+            <summary>
+            Базовое окно сервера
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.Connect">
+            <summary>
+            Подключиться
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.OpenWindow(System.String)">
+            <summary>
+            Открыть новое окно
+            </summary>
+            <param name="name">Имя окна</param>
+            <returns>Созданное окно</returns>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.Send(System.String,System.String,System.Boolean)">
+            <summary>
+            Сказать/выполнить команду
+            </summary>
+            <param name="name">Кому: ник получателя/Имя канала</param>
+            <param name="message">Сообщение</param>
+            <param name="silent">Добавить ли сообщение "молча" (без вывода в окно)</param>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.JoinChannel(System.String)">
+            <summary>
+            Зайти на канал
+            </summary>
+            <param name="channel">Имя канала</param>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.ContainsWindow(System.String)">
+            <summary>
+            Открыто ли окно
+            </summary>
+            <param name="name">Имя окна</param>
+            <returns></returns>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.SetNick(System.String)">
+            <summary>
+            Установить новый ник
+            </summary>
+            <param name="name">Новый ник</param>
+        </member>
+        <member name="M:IRCProviders.IServerWindow.Execute(System.String,System.String[])">
+            <summary>
+            Выполнить команду
+            </summary>
+            <param name="windowName">Имя окна, для которого выполняется команда или null</param>
+            <param name="cmd">Параметры команды</param>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.Server">
+            <summary>
+            Сервер
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.Nick">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.IsConnected">
+            <summary>
+            Имеется ли подключение
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.Channels">
+            <summary>
+            Каналы, открытые на сервере
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.Privates">
+            <summary>
+            Окна личной переписки на сервере
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IServerWindow.Item(System.String)">
+            <summary>
+            Получить окно чата/канала по имени
+            </summary>
+            <param name="name">Имя окна</param>
+            <returns>Окно с таким именем или null</returns>
+        </member>
+        <member name="E:IRCProviders.IServerWindow.OnConnected">
+            <summary>
+            Подключение состоялось (в полном объёме)
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IServerWindow.NewWindow">
+            <summary>
+            Открыто новое окно
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IServerWindow.PersonRenames">
+            <summary>
+            Пользователь переименовался
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IServerWindow.IRCMessageReceived">
+            <summary>
+            Получено IRC-сообщение
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IServerWindow.WhoisUpdated">
+            <summary>
+            Обновлена информация о пользователе
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IRCMessageEventArgs">
+            <summary>
+            Аргументы сообщения IRC-протокола
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCMessageEventArgs.#ctor(IRCProviders.IRCMessage)">
+            <summary>
+            Создание аргументов
+            </summary>
+            <param name="message">Полученное сообщение</param>
+        </member>
+        <member name="P:IRCProviders.IRCMessageEventArgs.Message">
+            <summary>
+            Полученное сообщение
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessageEventArgs.Cancel">
+            <summary>
+            Отмена стандартной реакции клиента на сообщение (выставить в true)
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IRCMessage">
+            <summary>
+            Сообщение IRC
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IRCMessage.#ctor(System.String)">
+            <summary>
+            Создание IRC-сообщения путём парсинга строки с сообщением
+            </summary>
+            <param name="message">Строка с сообщением</param>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Prefix">
+            <summary>
+            Префикс отправителя
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Name">
+            <summary>
+            Имя отправителя
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.User">
+            <summary>
+            Имя юзера отправителя
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Host">
+            <summary>
+            Имя хоста отправителя
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Command">
+            <summary>
+            Команда
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Param">
+            <summary>
+            Параметры команды
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IRCMessage.Tail">
+            <summary>
+            Хвост сообщения
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IChannelWindow">
+            <summary>
+            Базовое окно канала
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IChannelWindow.Topic">
+            <summary>
+            Тема канала
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IChannelWindow.FullChannelName">
+            <summary>
+            Полное имя канала (с именем сервера и ником)
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IChannelWindow.UsersList">
+            <summary>
+            Список пользователей канала
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IChannelWindow.ChannelTopicChanged">
+            <summary>
+            Изменилась тема
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IChannelWindow.ChannelModesChanged">
+            <summary>
+            Изменились режимы канала
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IChannelWindow.PersonModesChanged">
+            <summary>
+            Изменились режимы пользователя
+            </summary>
+        </member>
+        <member name="E:IRCProviders.IChannelWindow.PersonKicked">
+            <summary>
+            Пользователь выкинут
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IMainWindow">
+            <summary>
+            Основной интерфейс, через который аддон может взаимодействовать с приложением
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.CreateObject(System.AppDomain,System.Type,System.Object[])">
+            <summary>
+            Создать объект в Цирцее.
+            Все визуальные элементы в аддонах должны создаваться только через эту функцию
+            </summary>
+            <param name="domain">Домен аддона, в котором должен быть создан объект</param>
+            <param name="objectType">Тип создаваемого объекта</param>
+            <param name="args">Параметры конструктора</param>
+            <returns></returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.DestroyObject(System.Object)">
+            <summary>
+            Уничтожить объект
+            </summary>
+            <param name="obj">Уничтожаемый объект</param>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.RunCallback(IRCProviders.Special.Action)">
+            <summary>
+            Позволяет выполнить функцию в потоке Цирцеи
+            В этой функции разрешено создавать свои визуальные элементы
+            </summary>
+            <param name="del">Исполяемая функция</param>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.RunCallback(System.Action{System.Object},System.Object)">
+            <summary>
+            Позволяет выполнить функцию в потоке Цирцеи
+            В этой функции разрешено создавать свои визуальные элементы
+            </summary>
+            <param name="del">Исполяемая функция</param>
+            <param name="param">Параметр функции</param>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.ShowDialog(System.Windows.Forms.Form)">
+            <summary>
+            Показать форму в качестве диалогового окна в клиенте
+            </summary>
+            <param name="dialogForm">Отображаемая форма</param>
+            <returns>Результат показа</returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.RegisterAsMDIChild(IRCProviders.IRCForm,IRCProviders.IRCForm,System.Windows.Forms.IWin32Window)">
+            <summary>
+            Зарегистрировать форму в качестве MDI окна и показать её
+            </summary>
+            <param name="owner">Форма, которая будет являться главной по отношению к данной</param>
+            <param name="child">Переданная форма</param>
+            <returns>Узел в дереве, который отображает данную форму</returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.GetWindowOwner(System.Windows.Forms.Form)">
+            <summary>
+            Получить окно, владеющее формой
+            </summary>
+            <param name="form">Форма</param>
+            <returns>Форма-владелец или null. Имеет тип IBaseWindow для окон IRC (серверов, каналов и приват) и Form для прочих окон</returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.ShowMessageBox(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            Показать MessageBox
+            </summary>
+            <param name="dialogForm">Отображаемая форма</param>
+            <returns>Результат показа</returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.Status(System.String)">
+            <summary>
+            Установить статусное сообщение
+            </summary>
+            <param name="statusString">Статусное сообщение</param>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.Flash">
+            <summary>
+            Заставить окно мигать (только в свёрнутом состоянии)
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.OpenConnection(IRCConnection.ConnectionInfo)">
+            <summary>
+            Подключиться к определённому серверу
+            </summary>
+            <param name="info">Информация о подключении</param>
+            <returns>Созданное окно подключения (или существующее, если подключение уже состоялось)</returns>
+        </member>
+        <member name="M:IRCProviders.IMainWindow.Play(System.String,System.Int32)">
+            <summary>
+            Сыграть файл мультимедиа
+            </summary>
+            <param name="multimediaFile">Адрес мультимедиа-файла</param>
+            <param name="numOfPlayer">Номер проигрывателя: 0 - основной, 1 - вспомогательный</param>
+            <returns>Строка, в которую передаётся сообщение об ошибке</returns>
+        </member>
+        <member name="P:IRCProviders.IMainWindow.DataFolderPath">
+            <summary>
+            Расположение папки данных Цирцеи (может меняться в процессе работы программы)
+            </summary>
+            <remarks>Для хранения настроек аддона лучше использовать его собственную папку</remarks>
+        </member>
+        <member name="P:IRCProviders.IMainWindow.ActiveIRCWindow">
+            <summary>
+            Активное окно среди окон серверов, каналов и приватов
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IMainWindow.ServerWindows">
+            <summary>
+            Окна существующих подключений
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IMainWindow.DefaultNick">
+            <summary>
+            Ник по умолчанию
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IMainWindow.User">
+            <summary>
+            Личные данные пользователя
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IChannelUser">
+            <summary>
+            Элемент списка
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IChannelUser.NickName">
+            <summary>
+            Заголовок
+            </summary>
+        </member>
+        <member name="P:IRCProviders.IChannelUser.Modes">
+            <summary>
+            Режимы пользователя
+            </summary>
+        </member>
+        <member name="T:IRCProviders.JoinEventArgs">
+            <summary>
+            Аргументы присоединения к каналу/привату
+            </summary>
+        </member>
+        <member name="P:IRCProviders.JoinEventArgs.Window">
+            <summary>
+            Новое окно
+            </summary>
+        </member>
+        <member name="M:IRCProviders.Win32.GetShortPathName(System.String,System.Text.StringBuilder,System.Int32)">
+            <summary>
+            Получить сокращённую запись пути
+            </summary>
+            <param name="path"></param>
+            <param name="shortPath"></param>
+            <param name="shortPathLength"></param>
+            <returns></returns>
+        </member>
+        <member name="T:IRCProviders.LogMode">
+            <summary>
+            Режим записи логов
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.None">
+            <summary>
+            Отсутствует
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.Txt">
+            <summary>
+            Текст
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.Rtf">
+            <summary>
+            RTF
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.HtmlForum">
+            <summary>
+            HTML для форумов
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.Forum">
+            <summary>
+            Стиль для форума
+            </summary>
+        </member>
+        <member name="F:IRCProviders.LogMode.Forum2">
+            <summary>
+            Стиль для форума 2
+            </summary>
+        </member>
+        <member name="T:IRCProviders.FlashMode">
+            <summary>
+            Режим мигания
+            </summary>
+        </member>
+        <member name="F:IRCProviders.FlashMode.Full">
+            <summary>
+            Мигает на любые сообщения
+            </summary>
+        </member>
+        <member name="F:IRCProviders.FlashMode.Meduim">
+            <summary>
+            Мигает на ник и приваты
+            </summary>
+        </member>
+        <member name="F:IRCProviders.FlashMode.Weak">
+            <summary>
+            Не мигает вообще
+            </summary>
+        </member>
+        <member name="T:IRCProviders.PlayMode">
+            <summary>
+            Режим произвольного действия
+            </summary>
+        </member>
+        <member name="F:IRCProviders.PlayMode.All">
+            <summary>
+            Работает всегда
+            </summary>
+        </member>
+        <member name="F:IRCProviders.PlayMode.OpOnly">
+            <summary>
+            Работает только по команда оператора канала
+            </summary>
+        </member>
+        <member name="F:IRCProviders.PlayMode.None">
+            <summary>
+            Не работает никогда
+            </summary>
+        </member>
+        <member name="T:IRCProviders.Special">
+            <summary>
+            Набор специальных символов и строк для IRC
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Color">
+            <summary>
+            Код цвета
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Bold">
+            <summary>
+            Код жирности
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Underlined">
+            <summary>
+            Код подчёркивания
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Reverse">
+            <summary>
+            Код реверсивного текста
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Plain">
+            <summary>
+            Код простого текста
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.Ctcp">
+            <summary>
+            Обрамляющий символ для CTCP-сообщений
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.CmdStarter">
+            <summary>
+            Символ, с которого начинаются сообщения-команды
+            </summary>
+        </member>
+        <member name="F:IRCProviders.Special.StringSeparator">
+            <summary>
+            Разделитель строк в IRC-сообщениях
+            </summary>
+        </member>
+        <member name="T:IRCProviders.IPanel">
+            <summary>
+            Интерфейс, обеспечивающий потокобезопасный доступ к функциям панели
+            </summary>
+        </member>
+        <member name="M:IRCProviders.IPanel.AddControl(System.Windows.Forms.Control)">
+            <summary>
+            Добавить контрол
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:IRCProviders.IPanel.RemoveControl(System.Windows.Forms.Control)">
+            <summary>
+            Удалить контрол
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:IRCProviders.CmdDel">
+            <summary>
+            Введена команда
+            </summary>
+            <param name="child">Окно, в котором была ведена команда</param>
+            <param name="cmd">Текст команды</param>
+        </member>
+        <member name="T:IRCProviders.AddonInfo">
+            <summary>
+            Информация об аддоне
+            </summary>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.Path">
+            <summary>
+            Путь к аддону
+            </summary>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.ManifestPath">
+            <summary>
+            Расположение манифеста
+            </summary>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.AddonType">
+            <summary>
+            Имя аддона
+            </summary>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.Mode">
+            <summary>
+            Режим запуска
+            </summary>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.Visible">
+            <summary>
+            Видимый ли в главном меню
+            </summary>
+            <remarks>Имеет смысл только при Mode = StartMode.Manual</remarks>
+        </member>
+        <member name="P:IRCProviders.AddonInfo.Guid">
+            <summary>
+            Уникальный идентификатор аддона
+            </summary>
+        </member>
+        <member name="T:IRCProviders.AddonInfo.StartMode">
+            <summary>
+            Режим запуска аддона
+            </summary>
+        </member>
+        <member name="F:IRCProviders.AddonInfo.StartMode.None">
+            <summary>
+            Отключён
+            </summary>
+        </member>
+        <member name="F:IRCProviders.AddonInfo.StartMode.Automatic">
+            <summary>
+            Автоматический
+            </summary>
+        </member>
+        <member name="F:IRCProviders.AddonInfo.StartMode.Manual">
+            <summary>
+            Ручной
+            </summary>
+        </member>
+        <member name="T:IRCProviders.LogProvider">
+            <summary>
+            Класс, отвечающий за запись логов канала/привата
+            </summary>
+        </member>
+        <member name="T:IRCProviders.KeysStringDictionary">
+            <summary>
+            Словарь кнопок и строк
+            </summary>
+        </member>
+    </members>
+</doc>

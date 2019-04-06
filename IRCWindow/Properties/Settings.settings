@@ -1,0 +1,285 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IRCWindow.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UpdatePath" Description="Расположение обновлений" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://vladimirkhil.com/circe/</Value>
+    </Setting>
+    <Setting Name="AppVersion" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2011-01-06</Value>
+    </Setting>
+    <Setting Name="DefUserIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ObsoleteTime" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="UserInfoString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">About me</Value>
+    </Setting>
+    <Setting Name="SearchForUpdates" Type="System.Windows.Forms.CheckState" Scope="User">
+      <Value Profile="(Default)">Checked</Value>
+    </Setting>
+    <Setting Name="RplUserHostRegexPattern" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">(?&lt;nick&gt;[^ =*]*)(?&lt;op&gt;\*?)\=(?&lt;plus&gt;[+-])\~(?&lt;host&gt;[^ ]*)</Value>
+    </Setting>
+    <Setting Name="SearchForAddons" Type="System.Windows.Forms.CheckState" Scope="User">
+      <Value Profile="(Default)">Checked</Value>
+    </Setting>
+    <Setting Name="DataVersion" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2011-01-06</Value>
+    </Setting>
+    <Setting Name="UseAppDataFolder" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DataFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ServersVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NickListVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ChannelsVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="NicksVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PersonVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="SettingsVisibility" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Proxy" Type="System.Uri" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseProxy" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ProxyCredentials" Type="System.Net.NetworkCredential" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IsFirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="HotKeys" Type="IRCProviders.KeysStringDictionary" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Colors" Type="IRCProviders.Colors" Scope="User">
+      <Value Profile="(Default)">&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;&amp;lt;Colors&amp;gt;&amp;lt;item&amp;gt;-1&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16777216&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16777077&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16751616&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-65536&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5952982&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-8388480&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-23296&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-256&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16711808&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14634326&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-7876870&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16776961&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-65281&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-11184811&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-2302756&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-2180985&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-7722014&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5171&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-657956&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5573131&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9177611&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-12782091&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16404561&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16422551&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-8323104&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-13382503&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14247565&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-15112628&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-15977690&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-677131&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-691211&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-705291&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5306961&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9894551&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-2064129&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6736948&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9230695&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-11789978&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14283725&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-658006&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-658061&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-658116&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5263611&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9869051&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-8064&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-3368653&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6720730&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-10073063&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-13425140&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5592331&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9210891&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-12829451&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16448081&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16448151&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-8331009&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-13395508&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14257255&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-15119258&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-15981005&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5573206&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9177741&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-12782276&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16404731&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16422651&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-2031744&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6697933&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9201370&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-11770343&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14273780&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-677206&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-691341&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-705476&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-5307131&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9894651&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-32544&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-3394663&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6740365&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-10086068&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-13431770&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-986896&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-4276546&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-7566196&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-10855846&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14145496&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-2031648&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6697831&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9201293&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-11770292&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-14273754&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-4343957&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-7667712&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16741493&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-9728477&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-16724271&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-7077677&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-13676721&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-8355840&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;-6632142&amp;lt;/item&amp;gt;&amp;lt;/Colors&amp;gt;</Value>
+    </Setting>
+    <Setting Name="ModesTable" Type="IRCProviders.CharCharDictionary" Scope="User">
+      <Value Profile="(Default)">&amp;lt;?xml version="1.0" encoding="utf-16"?&amp;gt;&amp;lt;table&amp;gt;&amp;lt;item&amp;gt;&amp;lt;key&amp;gt;o&amp;lt;/key&amp;gt;&amp;lt;value&amp;gt;@&amp;lt;/value&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;&amp;lt;key&amp;gt;h&amp;lt;/key&amp;gt;&amp;lt;value&amp;gt;%&amp;lt;/value&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;&amp;lt;key&amp;gt;v&amp;lt;/key&amp;gt;&amp;lt;value&amp;gt;+&amp;lt;/value&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;&amp;lt;key&amp;gt;a&amp;lt;/key&amp;gt;&amp;lt;value&amp;gt;&amp;amp;amp;&amp;lt;/value&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;item&amp;gt;&amp;lt;key&amp;gt;b&amp;lt;/key&amp;gt;&amp;lt;value&amp;gt;~&amp;lt;/value&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;/table&amp;gt;</Value>
+    </Setting>
+    <Setting Name="AddonsNew" Type="CIRCe.Base.AddonInformationList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfAddonInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
+    </Setting>
+    <Setting Name="Channels" Type="IRCConnection.ChannelList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfChannel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#chgk&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#luz&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#mafbot&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#saveicq&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#sns&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#svoya_igra&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#svoyak&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#vdi&lt;/Name&gt;
+  &lt;/Channel&gt;
+  &lt;Channel&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Name&gt;#vdi-red&lt;/Name&gt;
+  &lt;/Channel&gt;
+&lt;/ArrayOfChannel&gt;</Value>
+    </Setting>
+    <Setting Name="Nicks" Type="IRCConnection.NickList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfNickName xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
+    </Setting>
+    <Setting Name="User" Type="IRCConnection.User" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;UserName&gt;User&lt;/UserName&gt;
+  &lt;Host&gt;Host&lt;/Host&gt;
+  &lt;Name&gt;Real name&lt;/Name&gt;
+  &lt;EMail&gt;me@host.ru&lt;/EMail&gt;
+  &lt;Info /&gt;
+&lt;/User&gt;</Value>
+    </Setting>
+    <Setting Name="Servers" Type="IRCConnection.ServerList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfServer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;IzhIrc&lt;/Description&gt;
+    &lt;Name&gt;irc.izhirc.ru&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#sns&lt;/Name&gt;
+      &lt;/Channel&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#svoya_igra&lt;/Name&gt;
+      &lt;/Channel&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#svoyak&lt;/Name&gt;
+      &lt;/Channel&gt;
+    &lt;/Channels&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;ForestNet&lt;/Description&gt;
+    &lt;Name&gt;irc.forestnet.org&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#saveicq&lt;/Name&gt;
+      &lt;/Channel&gt;
+    &lt;/Channels&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;2777&lt;/Description&gt;
+    &lt;Name&gt;irc.2777.ru&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#mafbot&lt;/Name&gt;
+      &lt;/Channel&gt;
+    &lt;/Channels&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;ChgkInfo&lt;/Description&gt;
+    &lt;Name&gt;irc.chgk.info&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#vdi&lt;/Name&gt;
+      &lt;/Channel&gt;
+      &lt;Channel&gt;
+        &lt;Sticked&gt;false&lt;/Sticked&gt;
+        &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+        &lt;Name&gt;#vdi-red&lt;/Name&gt;
+      &lt;/Channel&gt;
+    &lt;/Channels&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;MGTS&lt;/Description&gt;
+    &lt;Name&gt;irc.mgts.by&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels /&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+  &lt;Server&gt;
+    &lt;Sticked&gt;false&lt;/Sticked&gt;
+    &lt;AutoOpen&gt;false&lt;/AutoOpen&gt;
+    &lt;Description&gt;QuakeNet&lt;/Description&gt;
+    &lt;Name&gt;irc.quakenet.org&lt;/Name&gt;
+    &lt;Port&gt;6667&lt;/Port&gt;
+    &lt;Channels /&gt;
+    &lt;Passwords /&gt;
+  &lt;/Server&gt;
+&lt;/ArrayOfServer&gt;</Value>
+    </Setting>
+    <Setting Name="Windows" Type="IRCProviders.WindowInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfWindowInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Value>
+    </Setting>
+    <Setting Name="LogProviders" Type="IRCProviders.LogProvidersList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfLogProvider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;LogProvider&gt;
+    &lt;Title&gt;Txt&lt;/Title&gt;
+  &lt;/LogProvider&gt;
+  &lt;LogProvider&gt;
+    &lt;Title&gt;Html&lt;/Title&gt;
+    &lt;Header&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;[[WindowName]]&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&lt;/Header&gt;
+    &lt;OpenB&gt;&amp;lt;b&amp;gt;&lt;/OpenB&gt;
+    &lt;CloseB&gt;&amp;lt;/b&amp;gt;&lt;/CloseB&gt;
+    &lt;OpenU&gt;&amp;lt;u&amp;gt;&lt;/OpenU&gt;
+    &lt;CloseU&gt;&amp;lt;/u&amp;gt;&lt;/CloseU&gt;
+    &lt;OpenK&gt;&amp;lt;span style="color:[[Color]]"&amp;gt;&lt;/OpenK&gt;
+    &lt;CloseK&gt;&amp;lt;/span&amp;gt;&lt;/CloseK&gt;
+    &lt;OpenL&gt;&amp;lt;span style="background-color:[[Color]]"&amp;gt;&lt;/OpenL&gt;
+    &lt;CloseL&gt;&amp;lt;/span&amp;gt;&lt;/CloseL&gt;
+    &lt;Bottom&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/Bottom&gt;
+  &lt;/LogProvider&gt;
+  &lt;LogProvider&gt;
+    &lt;Title&gt;Rtf&lt;/Title&gt;
+    &lt;Header&gt;{\rtf1\ansi\ansicpg1251\deff0\deflang1049{\fonttbl{\f0\fnil\fcharset204{\*\fname Courier New;}Courier New CYR;}}[[RTFCT]]
+                \viewkind4\uc1\pard\f0\fs20
+&lt;/Header&gt;
+    &lt;OpenB&gt;\b&lt;/OpenB&gt;
+    &lt;CloseB&gt;\b0&lt;/CloseB&gt;
+    &lt;OpenU&gt;\ul&lt;/OpenU&gt;
+    &lt;CloseU&gt;\ul0&lt;/CloseU&gt;
+    &lt;OpenK&gt;\cf[[Color]]&lt;/OpenK&gt;
+    &lt;OpenL&gt;\chshdng0\chcbpat[[Color]]&lt;/OpenL&gt;
+    &lt;Bottom&gt;\r\n}\r\n&lt;/Bottom&gt;
+  &lt;/LogProvider&gt;
+&lt;/ArrayOfLogProvider&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

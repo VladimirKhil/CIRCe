@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12C9A9EF-3547-4373-AE31-65ED966FAFE4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRCWindow</RootNamespace>
+    <AssemblyName>CIRCe</AssemblyName>
+    <StartupObject>IRCWindow.Program</StartupObject>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>9EADC9757C1F1B7F966504628E4F662C5E7927EE</ManifestCertificateThumbprint>
+    <ManifestKeyFile>IRCWindow_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>ftp://hil.rodionov.de/httpdocs/IRC/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://hil.rodionov.de/IRC/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=4be120a55c5e67bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=4be120a55c5e67bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Mp3Player, Version=1.0.1.0, Culture=neutral, PublicKeyToken=4be120a55c5e67bd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Mp3Player.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddonForm.Designer.cs">
+      <DependentUpon>AddonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigTypeConverter.cs" />
+    <Compile Include="Converters\EnumConverter.cs" />
+    <Compile Include="Data\NickInfo.cs" />
+    <Compile Include="Data\UserOptions.cs" />
+    <Compile Include="HwndHost.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRCDataRow.cs" />
+    <Compile Include="FirstDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstDialog.Designer.cs">
+      <DependentUpon>FirstDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnumTypeConverter.cs" />
+    <Compile Include="FlashEditor.cs" />
+    <Compile Include="FlashingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlashingDialog.Designer.cs">
+      <DependentUpon>FlashingDialog.cs</DependentUpon>
+    </Compile>
+    <None Include="IExtendedCommunicationWindow.cs" />
+    <Compile Include="InstallationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallationDialog.Designer.cs">
+      <DependentUpon>InstallationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppDataEditor.cs" />
+    <Compile Include="BooleanTypeConverter.cs" />
+    <Compile Include="ChannelMode.cs" />
+    <Compile Include="ChannelUser.cs" />
+    <Compile Include="ChannelUsersList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChannelViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChannelViewForm.Designer.cs">
+      <DependentUpon>ChannelViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorChooseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorChooseDialog.Designer.cs">
+      <DependentUpon>ColorChooseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorPanel.Designer.cs">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorSelectedEventArgs.cs" />
+    <Compile Include="CustomizationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomizationDialog.Designer.cs">
+      <DependentUpon>CustomizationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataFolderEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataFolderEditorDialog.Designer.cs">
+      <DependentUpon>DataFolderEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPushedEventArgs.cs" />
+    <Compile Include="Flasher.cs" />
+    <Compile Include="FolderStorage.cs" />
+    <Compile Include="HotKeysSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotKeysSettingDialog.Designer.cs">
+      <DependentUpon>HotKeysSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputNumDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputNumDialog.Designer.cs">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallEventArgs.cs" />
+    <Compile Include="IRCColorEditor.cs" />
+    <Compile Include="IRCContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRCEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IRCEditor.Designer.cs">
+      <DependentUpon>IRCEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRCPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRCRichTextBoxEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IRCRichTextBoxEditor.Designer.cs">
+      <DependentUpon>IRCRichTextBoxEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinEventArgs.cs" />
+    <Compile Include="LocalizedCategoryAttribute.cs" />
+    <Compile Include="LocalizedDescriptionAttribute.cs" />
+    <Compile Include="LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="MediaView.xaml.cs">
+      <DependentUpon>MediaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MultimediaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultimediaForm.Designer.cs">
+      <DependentUpon>MultimediaForm.cs</DependentUpon>
+    </Compile>
+    <None Include="MyInstaller.cs" />
+    <None Include="MyInstaller.Designer.cs">
+      <DependentUpon>MyInstaller.cs</DependentUpon>
+    </None>
+    <Compile Include="MyPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PingInfo.cs" />
+    <Compile Include="ProgramOptionsConverter.cs" />
+    <Compile Include="MyProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProgressDialog.Designer.cs">
+      <DependentUpon>MyProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressDialog.cs" />
+    <Compile Include="ProxyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProxyDialog.Designer.cs">
+      <DependentUpon>ProxyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProxyEditor.cs" />
+    <Compile Include="ProxyTypeConverter.cs" />
+    <Compile Include="Service References\UpdateService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SpecialTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpecialTreeView.designer.cs">
+      <DependentUpon>SpecialTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StorageProvider.cs" />
+    <Compile Include="LinksViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinksViewForm.Designer.cs">
+      <DependentUpon>LinksViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildChannel.Designer.cs">
+      <DependentUpon>MDIChildChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildCommunication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildCommunication.Designer.cs">
+      <DependentUpon>MDIChildCommunication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramOptions.cs" />
+    <Compile Include="MDIChildPrivate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildPrivate.Designer.cs">
+      <DependentUpon>MDIChildPrivate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRCRichTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IRCRichTextBox.Designer.cs">
+      <DependentUpon>IRCRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChild.Designer.cs">
+      <DependentUpon>MDIChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIChildServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIChildServer.Designer.cs">
+      <DependentUpon>MDIChildServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiColorCell.cs" />
+    <Compile Include="MultiColorLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MultiColorLabel.designer.cs">
+      <DependentUpon>MultiColorLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.en-US.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddonForm.en-US.resx">
+      <DependentUpon>AddonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddonForm.resx">
+      <DependentUpon>AddonForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChannelViewForm.en-US.resx">
+      <DependentUpon>ChannelViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorChooseDialog.en-US.resx">
+      <DependentUpon>ColorChooseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPanel.en-US.resx">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizationDialog.en-US.resx">
+      <DependentUpon>CustomizationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataFolderEditorDialog.en-US.resx">
+      <DependentUpon>DataFolderEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstDialog.en-US.resx">
+      <DependentUpon>FirstDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstDialog.resx">
+      <DependentUpon>FirstDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashingDialog.en-US.resx">
+      <DependentUpon>FlashingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlashingDialog.resx">
+      <DependentUpon>FlashingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotKeysSettingDialog.en-US.resx">
+      <DependentUpon>HotKeysSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputNumDialog.en-US.resx">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallationDialog.en-US.resx">
+      <DependentUpon>InstallationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallationDialog.resx">
+      <DependentUpon>InstallationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChannelUsersList.resx">
+      <DependentUpon>ChannelUsersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChannelViewForm.resx">
+      <DependentUpon>ChannelViewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorChooseDialog.resx">
+      <DependentUpon>ColorChooseDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPanel.resx">
+      <DependentUpon>ColorPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizationDialog.resx">
+      <DependentUpon>CustomizationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataFolderEditorDialog.resx">
+      <DependentUpon>DataFolderEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotKeysSettingDialog.resx">
+      <DependentUpon>HotKeysSettingDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputNumDialog.resx">
+      <DependentUpon>InputNumDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCEditor.en-US.resx">
+      <DependentUpon>IRCEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCEditor.resx">
+      <DependentUpon>IRCEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCRichTextBox.en-US.resx">
+      <DependentUpon>IRCRichTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCRichTextBox.resx">
+      <DependentUpon>IRCRichTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCRichTextBoxEditor.en-US.resx">
+      <DependentUpon>IRCRichTextBoxEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRCRichTextBoxEditor.resx">
+      <DependentUpon>IRCRichTextBoxEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinksViewForm.en-US.resx">
+      <DependentUpon>LinksViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinksViewForm.resx">
+      <DependentUpon>LinksViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChild.en-US.resx">
+      <DependentUpon>MDIChild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChild.resx">
+      <DependentUpon>MDIChild.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildChannel.en-US.resx">
+      <DependentUpon>MDIChildChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildChannel.resx">
+      <DependentUpon>MDIChildChannel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildCommunication.en-US.resx">
+      <DependentUpon>MDIChildCommunication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildCommunication.resx">
+      <DependentUpon>MDIChildCommunication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildPrivate.resx">
+      <DependentUpon>MDIChildPrivate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildServer.en-US.resx">
+      <DependentUpon>MDIChildServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIChildServer.resx">
+      <DependentUpon>MDIChildServer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.en-US.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultimediaForm.en-US.resx">
+      <DependentUpon>MultimediaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultimediaForm.resx">
+      <DependentUpon>MultimediaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MyInstaller.resx">
+      <DependentUpon>MyInstaller.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="MyPanel.resx">
+      <DependentUpon>MyPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProgressDialog.en-US.resx">
+      <DependentUpon>MyProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProgressDialog.resx">
+      <DependentUpon>MyProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en-US.resx" />
+    <EmbeddedResource Include="ProxyDialog.resx">
+      <DependentUpon>ProxyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.en-US.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialTreeView.resx">
+      <DependentUpon>SpecialTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringEnterDialog.en-US.resx">
+      <DependentUpon>StringEnterDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StringEnterDialog.resx">
+      <DependentUpon>StringEnterDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallDialog.en-US.resx">
+      <DependentUpon>UninstallDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UninstallDialog.resx">
+      <DependentUpon>UninstallDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoDialog.resx">
+      <DependentUpon>UserInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoPanel.resx">
+      <DependentUpon>UserInfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfoToolTip.resx">
+      <DependentUpon>UserInfoToolTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.en-US.resx">
+      <DependentUpon>WaitDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowTreeView.resx">
+      <DependentUpon>WindowTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="key.snk" />
+    <None Include="Properties\DataSources\System.Uri.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\selectServ.png" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringEnterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StringEnterDialog.Designer.cs">
+      <DependentUpon>StringEnterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextStyleSaver.cs" />
+    <Compile Include="Properties\UISettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>UISettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UninstallDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UninstallDialog.Designer.cs">
+      <DependentUpon>UninstallDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfoDialog.Designer.cs">
+      <DependentUpon>UserInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInfoPanel.Designer.cs">
+      <DependentUpon>UserInfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInfoToolTip.Designer.cs">
+      <DependentUpon>UserInfoToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListViewItem.cs" />
+    <Compile Include="ViewModel\AddonSettings.cs" />
+    <Compile Include="ViewModel\Common\EditableCollectionViewModel.cs" />
+    <Compile Include="ViewModel\Common\SimpleCommand.cs" />
+    <Compile Include="ViewModel\Managers\AddonsManager.cs" />
+    <Compile Include="ViewModel\Managers\ArchiveManager.cs" />
+    <Compile Include="ViewModel\CIRCeAppItem.cs" />
+    <Compile Include="ViewModel\CIRCeApplication.cs" />
+    <Compile Include="ViewModel\CIRCeChannel.cs" />
+    <Compile Include="ViewModel\CIRCeChannelUserItem.cs" />
+    <Compile Include="ViewModel\CIRCeCommand.cs" />
+    <Compile Include="ViewModel\CIRCeMenuCommands.cs" />
+    <Compile Include="ViewModel\CIRCeUsersCommandsList.cs" />
+    <Compile Include="ViewModel\CIRCeItem.cs" />
+    <Compile Include="ViewModel\CIRCePanel.cs" />
+    <Compile Include="ViewModel\CIRCePrivateSession.cs" />
+    <Compile Include="ViewModel\CIRCeServer.cs" />
+    <Compile Include="ViewModel\CIRCeSession.cs" />
+    <Compile Include="ViewModel\CIRCeUsersList.cs" />
+    <Compile Include="ViewModel\Managers\InteropManager.cs" />
+    <Compile Include="ViewModel\Managers\RtfManager.cs" />
+    <Compile Include="ViewModel\RunningAddonInfo.cs" />
+    <Compile Include="View\AddonView.xaml.cs">
+      <DependentUpon>AddonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CollectionEditorView.xaml.cs">
+      <DependentUpon>CollectionEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ExtendedChannelInfoView.xaml.cs">
+      <DependentUpon>ExtendedChannelInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ExtendedServerInfoView.xaml.cs">
+      <DependentUpon>ExtendedServerInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ItemEditorView.xaml.cs">
+      <DependentUpon>ItemEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaskView.xaml.cs">
+      <DependentUpon>MaskView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NickNameView.xaml.cs">
+      <DependentUpon>NickNameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInfoView.xaml.cs">
+      <DependentUpon>UserInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WaitDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.Designer.cs">
+      <DependentUpon>WaitDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowNode.cs" />
+    <Compile Include="WindowTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="Service References\UpdateService\update.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\update1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\update2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UpdateService\UpdateService1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AddonsChecker\AddonsChecker.csproj">
+      <Project>{AEEEDE8D-C865-4B5F-B625-7800D775BFDC}</Project>
+      <Name>AddonsChecker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CIRCe.Base\CIRCe.Base.csproj">
+      <Project>{70710803-D937-487D-8CF6-B0E87D76D4B8}</Project>
+      <Name>CIRCe.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRC.Client.Base\IRC.Client.Base.csproj">
+      <Project>{A549B201-BDAF-4F7F-9FEE-9BC3FF3BD78E}</Project>
+      <Name>IRC.Client.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRC.Client\IRC.Client.csproj">
+      <Project>{4FF67A7D-1BD2-4285-B04C-BEE23BA1F4A7}</Project>
+      <Name>IRC.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCConnection\IRCConnection.csproj">
+      <Project>{A0C6DC55-6F11-41A7-9BEA-F7156FD69897}</Project>
+      <Name>IRCConnection</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCProviders\IRCProviders.csproj">
+      <Project>{03EEB4D4-0B97-447E-A2F2-29834B6737F5}</Project>
+      <Name>IRCProviders</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connectServ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgramIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\joinChn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IRCWindow_TemporaryKey.pfx" />
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="addons.xml" />
+    <Content Include="dlls\Microsoft.WindowsAPICodePack.dll" />
+    <Content Include="dlls\Microsoft.WindowsAPICodePack.Shell.dll" />
+    <Content Include="dlls\Mp3Player.dll" />
+    <Content Include="help\about.htm" />
+    <Content Include="help\cmd.htm" />
+    <Content Include="help\extension.htm" />
+    <Content Include="help\index.htm" />
+    <Content Include="help\menu.htm" />
+    <Content Include="help\style.css" />
+    <Content Include="icon.ico" />
+    <None Include="app.manifest" />
+    <Content Include="CIRCe.lnk" />
+    <None Include="help.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="License.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="media.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="new.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\application_cascade.png" />
+    <None Include="Resources\application_tile_horizontal.png" />
+    <None Include="Resources\application_tile_vertical.png" />
+    <None Include="Resources\78.png" />
+    <Content Include="Resources\channel.png" />
+    <Content Include="Resources\connect.png" />
+    <None Include="Resources\cross.png" />
+    <Content Include="Resources\icon.ico" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\maximize.png" />
+    <None Include="Resources\user_comment.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\user_suit.png" />
+    <Resource Include="Resources\icon.png" />
+    <None Include="Properties\UISettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UISettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UpdateService\configuration91.svcinfo" />
+    <None Include="Service References\UpdateService\configuration.svcinfo" />
+    <None Include="Service References\UpdateService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UpdateService\update.disco" />
+    <Resource Include="Resources\logo.ico" />
+    <Resource Include="Resources\logo.png" />
+    <Content Include="site.url">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AddOns\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Media\" />
+    <Folder Include="Resources\Origin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UpdateService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MediaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CollectionEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ExtendedChannelInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ExtendedServerInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ItemEditorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\NickNameView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,959 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="SFXAddon" xml:space="preserve">
+    <value>Распаковывающийся архив с дополнением</value>
+  </data>
+  <data name="AdminMailMessage" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="arrow_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_left.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ModeA" xml:space="preserve">
+    <value>Анонимный (маски пользователей скрыты)</value>
+  </data>
+  <data name="AlreadyRegisteredMessage" xml:space="preserve">
+    <value>Вы уже зарегистрировались</value>
+  </data>
+  <data name="application_tile_horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_tile_horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IsOnline" xml:space="preserve">
+    <value>онлайн</value>
+  </data>
+  <data name="GreekProgramName" xml:space="preserve">
+    <value>Κίρκη</value>
+  </data>
+  <data name="user_comment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_comment.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Away" xml:space="preserve">
+    <value>ушёл</value>
+  </data>
+  <data name="RplUserInfoMessage" xml:space="preserve">
+    <value>Информация о пользователях:</value>
+  </data>
+  <data name="UnsufficientParams" xml:space="preserve">
+    <value>недостаточное число параметров</value>
+  </data>
+  <data name="WhoReply" xml:space="preserve">
+    <value>Информация о {7} ({0}@{1}): канал: {2}, сервер: {3}, прыжков: {4}, информация: {5}, реальное имя: {6}</value>
+  </data>
+  <data name="TotalChannels" xml:space="preserve">
+    <value>Всего каналов</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="MediumFlashMode" xml:space="preserve">
+    <value>Мигать при получении сообщения в привате и упоминании ника на канале</value>
+  </data>
+  <data name="ModeT" xml:space="preserve">
+    <value>Топик устанавливают только операторы</value>
+  </data>
+  <data name="EndOfMOTD" xml:space="preserve">
+    <value>Завершение передачи сообщения дня.</value>
+  </data>
+  <data name="EndOfTrace" xml:space="preserve">
+    <value>Конец трассировки</value>
+  </data>
+  <data name="InformationAbout" xml:space="preserve">
+    <value>Информация о</value>
+  </data>
+  <data name="Hostname" xml:space="preserve">
+    <value>Имя хоста</value>
+  </data>
+  <data name="SaveInstallerAs" xml:space="preserve">
+    <value>Сохранить установщик</value>
+  </data>
+  <data name="IRCServerListConfig" xml:space="preserve">
+    <value>Настройка списка IRC серверов</value>
+  </data>
+  <data name="PlayModeAll" xml:space="preserve">
+    <value>Всегда</value>
+  </data>
+  <data name="FullFlashMode" xml:space="preserve">
+    <value>Мигать при получении любого сообщения</value>
+  </data>
+  <data name="WasNoSuchNick" xml:space="preserve">
+    <value>Исторической информации о нике {0} не имеется</value>
+  </data>
+  <data name="AuthorSiteUrl" xml:space="preserve">
+    <value>http://ur-quan1986.livejournal.com/74013.html?mode=reply&amp;subject=Замечания по Цирцее</value>
+  </data>
+  <data name="NoNicknameGivenMessage" xml:space="preserve">
+    <value>В параметрах отсутствует никнейм</value>
+  </data>
+  <data name="Server" xml:space="preserve">
+    <value>Сервер</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Текст</value>
+  </data>
+  <data name="ModeK" xml:space="preserve">
+    <value>Установить пароль для входа</value>
+  </data>
+  <data name="InstallError" xml:space="preserve">
+    <value>Произошла ошибка</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>Новый</value>
+  </data>
+  <data name="NowYourNickIs" xml:space="preserve">
+    <value>Теперь ваш ник</value>
+  </data>
+  <data name="WildTopLevelMessage" xml:space="preserve">
+    <value>недопустимый символ в домене верхнего уровня</value>
+  </data>
+  <data name="RealName" xml:space="preserve">
+    <value>Настоящее имя</value>
+  </data>
+  <data name="ModeP" xml:space="preserve">
+    <value>Приватный</value>
+  </data>
+  <data name="WeakFlashMode" xml:space="preserve">
+    <value>Не мигать</value>
+  </data>
+  <data name="UsersDisabledMessage" xml:space="preserve">
+    <value>Команда USERS отключена на данном сервере</value>
+  </data>
+  <data name="ModeC" xml:space="preserve">
+    <value>Запрет цветных сообщений</value>
+  </data>
+  <data name="CannotJoin" xml:space="preserve">
+    <value>Невозможно подключиться</value>
+  </data>
+  <data name="ConnectToServer" xml:space="preserve">
+    <value>Подключиться к серверу</value>
+  </data>
+  <data name="ChannelOpPrivsNeeded" xml:space="preserve">
+    <value>Вы не оператор на канале!</value>
+  </data>
+  <data name="AvailableMultimedia" xml:space="preserve">
+    <value>Доступные видео, изображения и звуки</value>
+  </data>
+  <data name="IsAvailableForHelp" xml:space="preserve">
+    <value>доступен для помощи</value>
+  </data>
+  <data name="EndOfList" xml:space="preserve">
+    <value>Конец списка.</value>
+  </data>
+  <data name="MOTD" xml:space="preserve">
+    <value>Передача сообщения дня...</value>
+  </data>
+  <data name="ServerDebugMode" xml:space="preserve">
+    <value>тестовый режим</value>
+  </data>
+  <data name="InstallToolTip" xml:space="preserve">
+    <value>Инсталлировать в программу новые дополнения с сайта автора или с диска</value>
+  </data>
+  <data name="EndOfInfo" xml:space="preserve">
+    <value>Конец информации о сервере</value>
+  </data>
+  <data name="IRCOp" xml:space="preserve">
+    <value>IRC-оператор</value>
+  </data>
+  <data name="NoPrivileges" xml:space="preserve">
+    <value>У вас нет полномочий IRC оператора!</value>
+  </data>
+  <data name="MenuVisible" xml:space="preserve">
+    <value>Виден в меню</value>
+  </data>
+  <data name="PlayModeOpOnly" xml:space="preserve">
+    <value>Только по команде оператора</value>
+  </data>
+  <data name="LocalProgramName" xml:space="preserve">
+    <value>Цирцея</value>
+  </data>
+  <data name="Nick" xml:space="preserve">
+    <value>Ник</value>
+  </data>
+  <data name="ChannelNickDoesNotExistst" xml:space="preserve">
+    <value>Не существует ник/канал</value>
+  </data>
+  <data name="ModeB" xml:space="preserve">
+    <value>Установить маску бана</value>
+  </data>
+  <data name="Message468" xml:space="preserve">
+    <value>Только серверы могут изменить этот режим у канала {0}!</value>
+  </data>
+  <data name="IsOnReply" xml:space="preserve">
+    <value>Находятся онлайн: {0}</value>
+  </data>
+  <data name="CloseToolTip" xml:space="preserve">
+    <value>Закрыть окно и все подчинённые окна</value>
+  </data>
+  <data name="ChannelModes" xml:space="preserve">
+    <value>Режимы</value>
+  </data>
+  <data name="SetNewTopic" xml:space="preserve">
+    <value>Установить новую тему канала?</value>
+  </data>
+  <data name="NewServer" xml:space="preserve">
+    <value>Новый сервер</value>
+  </data>
+  <data name="WaitingForUserInfo" xml:space="preserve">
+    <value>Получение данных...</value>
+  </data>
+  <data name="BadChanMaskMessage" xml:space="preserve">
+    <value>Неизвестный канал/маска "{0}"!</value>
+  </data>
+  <data name="WhoWasUser" xml:space="preserve">
+    <value>{0} был {1}@{2} (реальное имя: {3})</value>
+  </data>
+  <data name="ClickToConnect" xml:space="preserve">
+    <value>Нажмите для подключения</value>
+  </data>
+  <data name="AwayWithWords" xml:space="preserve">
+    <value>{0} отошёл со словами: {1}</value>
+  </data>
+  <data name="NoSuchChannelMessage" xml:space="preserve">
+    <value>Не существует канал: {0}</value>
+  </data>
+  <data name="EndOfStats" xml:space="preserve">
+    <value>Конец статистики</value>
+  </data>
+  <data name="MarkedAsBeingAway" xml:space="preserve">
+    <value>Вы отмечены как отсутствующий!</value>
+  </data>
+  <data name="AddonDesription" xml:space="preserve">
+    <value>{0} (автор - {1})</value>
+  </data>
+  <data name="application_tile_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_tile_vertical.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NickListConfig" xml:space="preserve">
+    <value>Настройка списка ников</value>
+  </data>
+  <data name="InviteEdit" xml:space="preserve">
+    <value>Редактирование списка свободных от лимита</value>
+  </data>
+  <data name="TooManyTargetsMessage" xml:space="preserve">
+    <value>слишком много получателей, сообщение не отправлено</value>
+  </data>
+  <data name="ErrorMsg" xml:space="preserve">
+    <value>Произошла ошибка! Описание ошибки можно сохранить в файл и отправить разработчику. Спасибо!</value>
+  </data>
+  <data name="TooManyChannelsMessage" xml:space="preserve">
+    <value>Вы зашли на предельно допустимое число каналов!</value>
+  </data>
+  <data name="UserInfoAnswer" xml:space="preserve">
+    <value>Информация о пользователе {0}: {1}</value>
+  </data>
+  <data name="Install" xml:space="preserve">
+    <value>Установить</value>
+  </data>
+  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetBy" xml:space="preserve">
+    <value>установлена</value>
+  </data>
+  <data name="UserDontMatchMessage" xml:space="preserve">
+    <value>Нельзя узнать или изменить режимы другого пользователя!</value>
+  </data>
+  <data name="AvailableAddons" xml:space="preserve">
+    <value>Доступные дополнения</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="NeedMoreParamsMessage" xml:space="preserve">
+    <value>Недостаточное число параметров у команды {0}!</value>
+  </data>
+  <data name="ChannelTopic" xml:space="preserve">
+    <value>Тема канала</value>
+  </data>
+  <data name="LogModeTxt" xml:space="preserve">
+    <value>Только текст</value>
+  </data>
+  <data name="AcceptList" xml:space="preserve">
+    <value>Допустимые лица: {0}</value>
+  </data>
+  <data name="AddonError" xml:space="preserve">
+    <value>Ошибка в дополнении {0}:</value>
+  </data>
+  <data name="CannotKillServer" xml:space="preserve">
+    <value>Вы не можете убить сервер!</value>
+  </data>
+  <data name="IsRegisteredNick" xml:space="preserve">
+    <value>{0} - зарегистрированный ник</value>
+  </data>
+  <data name="YourModeIs" xml:space="preserve">
+    <value>Ваш режим</value>
+  </data>
+  <data name="ColorPaletteFiles" xml:space="preserve">
+    <value>Файлы палитры цветов</value>
+  </data>
+  <data name="IsIRCOp" xml:space="preserve">
+    <value>является оператором IRC</value>
+  </data>
+  <data name="InGMode" xml:space="preserve">
+    <value>Находится в режиме +g (игнорируется сервером)</value>
+  </data>
+  <data name="TooFastTargetChangeMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PingAnswer" xml:space="preserve">
+    <value>{0}: пинг - {1}</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="Configure" xml:space="preserve">
+    <value>Настроить</value>
+  </data>
+  <data name="SetsMode" xml:space="preserve">
+    <value>установил(а) режим</value>
+  </data>
+  <data name="ModeM" xml:space="preserve">
+    <value>Модерируемый</value>
+  </data>
+  <data name="OpsOnline" xml:space="preserve">
+    <value>Операторов онлайн</value>
+  </data>
+  <data name="ErrorInMessage" xml:space="preserve">
+    <value>Не удалось обработать входящее сообщение сервера: {0}. Обратитесь к разработчику</value>
+  </data>
+  <data name="ChangeNickTo" xml:space="preserve">
+    <value>{0} поменял(а) ник на {1}</value>
+  </data>
+  <data name="FileDownloading" xml:space="preserve">
+    <value>Идёт загрузка файла...</value>
+  </data>
+  <data name="LogStarted" xml:space="preserve">
+    <value>*** Лог начат {0}</value>
+  </data>
+  <data name="channel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\channel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CouldNotUnpack" xml:space="preserve">
+    <value>Архив был скачан в папку мультимедиа, но не обнаружена программа для его распаковки! Поддерживаемые распаковщики: WinRAR, 7Zip.</value>
+  </data>
+  <data name="InstallCopyBadTry" xml:space="preserve">
+    <value>Была произведена попытка сохранить установленные файлы в папку {0}, но она уже существует! Поэтому файлы находятся по адресу {1}</value>
+  </data>
+  <data name="AddonInstalledSuccessfully" xml:space="preserve">
+    <value>Дополнение успешно установлено!</value>
+  </data>
+  <data name="ModeN" xml:space="preserve">
+    <value>Запрет сообщений от пользователей вне канала</value>
+  </data>
+  <data name="IncorrectCharactersInChannelName" xml:space="preserve">
+    <value>Имя канала содержит недопустимые символы!</value>
+  </data>
+  <data name="ServerLinkClosed" xml:space="preserve">
+    <value>Разрыв соединения с сервером</value>
+  </data>
+  <data name="Background" xml:space="preserve">
+    <value>Фон</value>
+  </data>
+  <data name="EndOfData" xml:space="preserve">
+    <value>Конец данных</value>
+  </data>
+  <data name="NoSuchServerMessage" xml:space="preserve">
+    <value>Не найден сервер {0}</value>
+  </data>
+  <data name="EndOfWhoWas" xml:space="preserve">
+    <value>Конец исторической информации</value>
+  </data>
+  <data name="For" xml:space="preserve">
+    <value>для</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email адрес</value>
+  </data>
+  <data name="ModeI" xml:space="preserve">
+    <value>Вход только по приглашению</value>
+  </data>
+  <data name="CannotSendToChannel" xml:space="preserve">
+    <value>Невозможно отправить на канал</value>
+  </data>
+  <data name="LogModeForum" xml:space="preserve">
+    <value>Формат форумов (без фона)</value>
+  </data>
+  <data name="UpdateException" xml:space="preserve">
+    <value>При поиске обновления возникла следующая ошибка: {0}</value>
+  </data>
+  <data name="HelpNotFoundMessage" xml:space="preserve">
+    <value>Помощь не найдена!</value>
+  </data>
+  <data name="ModeE" xml:space="preserve">
+    <value>Установить допустимые маски (антибаны)</value>
+  </data>
+  <data name="NoMOTDMessage" xml:space="preserve">
+    <value>Не удаётся загрузить сообщение дня!</value>
+  </data>
+  <data name="QuitsIRC" xml:space="preserve">
+    <value>вышел(ла) из IRC</value>
+  </data>
+  <data name="YouAreAnIRCOp" xml:space="preserve">
+    <value>Теперь вы IRC оператор</value>
+  </data>
+  <data name="UsersOnChannel" xml:space="preserve">
+    <value>На канале {0} находятся: {1}</value>
+  </data>
+  <data name="selectUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\38.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Installer" xml:space="preserve">
+    <value>Установщик</value>
+  </data>
+  <data name="IsOffline" xml:space="preserve">
+    <value>оффлайн</value>
+  </data>
+  <data name="NoTextToSendMessage" xml:space="preserve">
+    <value>Нет текста для отправки!</value>
+  </data>
+  <data name="UserIdle" xml:space="preserve">
+    <value>{0} не активен уже {1} секунд</value>
+  </data>
+  <data name="IRCColors" xml:space="preserve">
+    <value>Цвета IRC</value>
+  </data>
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EndOfAcceptList" xml:space="preserve">
+    <value>Конец списка допустимых лиц</value>
+  </data>
+  <data name="NotAway" xml:space="preserve">
+    <value>в сети</value>
+  </data>
+  <data name="IdleTime" xml:space="preserve">
+    <value>Время простоя</value>
+  </data>
+  <data name="UserOnChannelMessage" xml:space="preserve">
+    <value>Пользователь {0} находится уже на канале {1}!</value>
+  </data>
+  <data name="MediaInstalledSuccessfully" xml:space="preserve">
+    <value>Мультимедиа успешно установлено!</value>
+  </data>
+  <data name="AddonIsInstalled" xml:space="preserve">
+    <value>Данное дополнение уже было установлено ранее. Переустановить его?</value>
+  </data>
+  <data name="YouAreNotOnAChannel" xml:space="preserve">
+    <value>Вы не на канале</value>
+  </data>
+  <data name="ConnectingTo" xml:space="preserve">
+    <value>Подключение к</value>
+  </data>
+  <data name="SendingToG" xml:space="preserve">
+    <value>{0} отправляет вам сообщение, но вы находитесь в режиме +g и не можете его получить</value>
+  </data>
+  <data name="ByDefault" xml:space="preserve">
+    <value>По умолчанию</value>
+  </data>
+  <data name="ChannelListConfig" xml:space="preserve">
+    <value>Настройка списка IRC каналов</value>
+  </data>
+  <data name="BanNickChangeMessage" xml:space="preserve">
+    <value>Невозможно изменить ник, пока он забанен или используется на модерируемом канале</value>
+  </data>
+  <data name="RplInvitingMessage" xml:space="preserve">
+    <value>Вы успешно пригласили {0} на {1}</value>
+  </data>
+  <data name="YouWasKicked" xml:space="preserve">
+    <value>Вы были выкинуты с канала {0} пользователем {1}</value>
+  </data>
+  <data name="WrongFileName" xml:space="preserve">
+    <value>Задано неверное имя файла</value>
+  </data>
+  <data name="ServerOverload" xml:space="preserve">
+    <value>Сервер перегружен и не может выполнить вашу команду. Пожалуйста, попробуйте чуть позже</value>
+  </data>
+  <data name="TranslationSchemeMessage" xml:space="preserve">
+    <value>Ваша кодировка теперь {0}</value>
+  </data>
+  <data name="HasUpdates" xml:space="preserve">
+    <value>Обнаружены обновления программы до версии {0}. Загрузить их сейчас?</value>
+  </data>
+  <data name="EndOfWhoList" xml:space="preserve">
+    <value>Конец информации о {0}</value>
+  </data>
+  <data name="ModeL" xml:space="preserve">
+    <value>Лимит пользователей</value>
+  </data>
+  <data name="LogFinished" xml:space="preserve">
+    <value>*** Лог завершён {0}</value>
+  </data>
+  <data name="IsOnChannels" xml:space="preserve">
+    <value>Находится на каналах:</value>
+  </data>
+  <data name="ModeS" xml:space="preserve">
+    <value>Секретный</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="application_cascade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application_cascade.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Настройка</value>
+  </data>
+  <data name="UnknownCommandMessage" xml:space="preserve">
+    <value>Неизвестная команда: {0}</value>
+  </data>
+  <data name="LeavesChannel" xml:space="preserve">
+    <value>покинул(а) канал</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="NeedMajorUpgrade" xml:space="preserve">
+    <value>Внимание! Был выпущен новый дистрибутив Цирцеи. Желательно удалить все прежние установочные файлы и использовать новый. Нажмите "Да", чтобы позволить Цирцее самой скачать для вас новый установочный файл (около 1,5 Мб) и переустановиться. Нажмите "Нет", чтобы отложить обновление до следующего раза. Автоматическая переустановка позволит избавить вашу версию от ряда древних ошибок и обеспечит вам гарантию нормальной работы в системе Windows XP и выше.</value>
+  </data>
+  <data name="TotalUsers" xml:space="preserve">
+    <value>Всего пользователей</value>
+  </data>
+  <data name="InviteOnly" xml:space="preserve">
+    <value>Вход на канал {0} только по приглашению (+i)!</value>
+  </data>
+  <data name="KnockOpenMessage" xml:space="preserve">
+    <value>Канал {0} открыт!</value>
+  </data>
+  <data name="ModeMessage" xml:space="preserve">
+    <value>установлен режим</value>
+  </data>
+  <data name="NotOnChannelMessage" xml:space="preserve">
+    <value>Вы не находитесь на канале {0}!</value>
+  </data>
+  <data name="UnknownModeMessage" xml:space="preserve">
+    <value>Неизвестный режим канала "{0}"!</value>
+  </data>
+  <data name="ModeBigS" xml:space="preserve">
+    <value>Стирать цвета в сообщениях</value>
+  </data>
+  <data name="maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotRegisteredMessage" xml:space="preserve">
+    <value>: сперва нужно зарегистрироваться!</value>
+  </data>
+  <data name="Bot" xml:space="preserve">
+    <value>бот</value>
+  </data>
+  <data name="RplSingleUserInfoMessage" xml:space="preserve">
+    <value>{0} {1}</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="ServerTime" xml:space="preserve">
+    <value>Время на сервере {0}: {1}</value>
+  </data>
+  <data name="EnterNick" xml:space="preserve">
+    <value>Введите ник собеседника</value>
+  </data>
+  <data name="PlayModeNone" xml:space="preserve">
+    <value>Никогда</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Возникла ошибка: {0}</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Пользователь</value>
+  </data>
+  <data name="BadNick" xml:space="preserve">
+    <value>Недопустимый ник:</value>
+  </data>
+  <data name="SetPassword" xml:space="preserve">
+    <value>Введите пароль для входа на канал</value>
+  </data>
+  <data name="MarkedAsNotBeingAway" xml:space="preserve">
+    <value>Вы отмечены как присутствующий!</value>
+  </data>
+  <data name="InviteMessage" xml:space="preserve">
+    <value>Вы приглашены пользователем {0} на {1}</value>
+  </data>
+  <data name="ModeBigI" xml:space="preserve">
+    <value>Установить маски для лиц, неподвластных лимиту</value>
+  </data>
+  <data name="userData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_suit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetsNewTopic" xml:space="preserve">
+    <value>установил(а) новый топик канала</value>
+  </data>
+  <data name="EnterLimit" xml:space="preserve">
+    <value>Введите максимальное число пользователей</value>
+  </data>
+  <data name="PasswordNeeded" xml:space="preserve">
+    <value>Для входа на канал необходимо ввести ключ</value>
+  </data>
+  <data name="EndOfHelp" xml:space="preserve">
+    <value>Завершение помощи</value>
+  </data>
+  <data name="KicksUserFormChannel" xml:space="preserve">
+    <value>выкинул(а) с канала пользователя</value>
+  </data>
+  <data name="StartMode" xml:space="preserve">
+    <value>Режим запуска</value>
+  </data>
+  <data name="BansEdit" xml:space="preserve">
+    <value>Редактирование списка банов</value>
+  </data>
+  <data name="WithVoice" xml:space="preserve">
+    <value>голос на канале</value>
+  </data>
+  <data name="NoTopLevelDomainMessage" xml:space="preserve">
+    <value>не указан домен верхнего уровня</value>
+  </data>
+  <data name="NicknameInUseMessage" xml:space="preserve">
+    <value>Ник {0} уже занят!</value>
+  </data>
+  <data name="TopicSetBy" xml:space="preserve">
+    <value>Топик установил(а)</value>
+  </data>
+  <data name="NotEnoughParametresSpecified" xml:space="preserve">
+    <value>Недостаточно параметров</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Загрузить</value>
+  </data>
+  <data name="UpdateError" xml:space="preserve">
+    <value>При поиске обновлений возникла ошибка: {0}</value>
+  </data>
+  <data name="VersionAnswer" xml:space="preserve">
+    <value>{0} использует клиент {1}</value>
+  </data>
+  <data name="ServiceDownMessage" xml:space="preserve">
+    <value>В настоящий момент сервисы отключены!</value>
+  </data>
+  <data name="EnterWords" xml:space="preserve">
+    <value>Введите слова</value>
+  </data>
+  <data name="NotInAcceptList" xml:space="preserve">
+    <value>{0} не входит в ваш список допустимых лиц</value>
+  </data>
+  <data name="Addon" xml:space="preserve">
+    <value>Дополнение</value>
+  </data>
+  <data name="NoAdminInfoMessage" xml:space="preserve">
+    <value>Информации об администрации сервера {0} не имеется</value>
+  </data>
+  <data name="BannedFormChannelMessage" xml:space="preserve">
+    <value>Вы не можете войти на канал {0}, поскольку забанены на нём (+b)!</value>
+  </data>
+  <data name="VersionMessage" xml:space="preserve">
+    <value>Версия ПО сервера {0}: {1} ({2})</value>
+  </data>
+  <data name="LogModeNone" xml:space="preserve">
+    <value>Не вести логи</value>
+  </data>
+  <data name="NoOriginMessage" xml:space="preserve">
+    <value>Не определён источник сообщений</value>
+  </data>
+  <data name="NoParamForInstaller" xml:space="preserve">
+    <value>Для класса {1} не задан параметр {0}</value>
+  </data>
+  <data name="ExemptsEdit" xml:space="preserve">
+    <value>Редактирование списка антибанов</value>
+  </data>
+  <data name="FullUpdates" xml:space="preserve">
+    <value>Обнаружены накопительные обновления программы от {0}. Будет произведена дополнительная установка. Загрузить обновления сейчас?</value>
+  </data>
+  <data name="cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JoinMessage" xml:space="preserve">
+    <value>* {0} зашёл(ла) на канал</value>
+  </data>
+  <data name="NewChannel" xml:space="preserve">
+    <value>Новый канал</value>
+  </data>
+  <data name="WithOp" xml:space="preserve">
+    <value>оператор канала</value>
+  </data>
+  <data name="TimeAnswer" xml:space="preserve">
+    <value>Время у {0}: {1}</value>
+  </data>
+  <data name="SettingsAvailability" xml:space="preserve">
+    <value>Настройки доступны по правой кнопке мыши</value>
+  </data>
+  <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogModeForum2" xml:space="preserve">
+    <value>Формат форумов (с фоном в html)</value>
+  </data>
+  <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\78.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TopicCreated" xml:space="preserve">
+    <value>Топик создан</value>
+    <comment>TopicCreated description</comment>
+  </data>
+  <data name="LanguageEn" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="LanguageRu" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="SpecifyOneNickAtLeast" xml:space="preserve">
+    <value>Не задано ни одного ника. Задайте хотя бы один!</value>
+  </data>
+  <data name="HideEditorPanel" xml:space="preserve">
+    <value>Скрыть панель редактирования</value>
+  </data>
+  <data name="ShowEditorPanel" xml:space="preserve">
+    <value>Показать панель редактирования</value>
+  </data>
+  <data name="Channels" xml:space="preserve">
+    <value>Каналы</value>
+  </data>
+  <data name="IsIdleForSeconds" xml:space="preserve">
+    <value>Не активен {0} секунд</value>
+  </data>
+  <data name="IsRegistered" xml:space="preserve">
+    <value>зарегистрирован</value>
+  </data>
+  <data name="LCChat" xml:space="preserve">
+    <value>Чат</value>
+  </data>
+  <data name="LCCommon" xml:space="preserve">
+    <value>Общее</value>
+  </data>
+  <data name="LCInput" xml:space="preserve">
+    <value>Строка ввода</value>
+  </data>
+  <data name="LCSpecial" xml:space="preserve">
+    <value>Специальное</value>
+  </data>
+  <data name="LCTopic" xml:space="preserve">
+    <value>Тема канала</value>
+  </data>
+  <data name="LCUsersList" xml:space="preserve">
+    <value>Список пользователей</value>
+  </data>
+  <data name="LCWindowsPanel" xml:space="preserve">
+    <value>Панель окон</value>
+  </data>
+  <data name="AppDataFolder" xml:space="preserve">
+    <value>Расположение папки данных</value>
+  </data>
+  <data name="AppDataFolderDescription" xml:space="preserve">
+    <value>Адрес, по которому хранятся логи, аддоны и мультимедиа данного пользователя Цирцеи</value>
+  </data>
+  <data name="AppLanguage" xml:space="preserve">
+    <value>Язык программы</value>
+  </data>
+  <data name="AppLanguageDescription" xml:space="preserve">
+    <value>Для смены языка следует перезапустить программу</value>
+  </data>
+  <data name="ChatFontDescription" xml:space="preserve">
+    <value>Влияет только на вновь возникающий текст</value>
+  </data>
+  <data name="DateTimeFormat" xml:space="preserve">
+    <value>Формат времени</value>
+  </data>
+  <data name="DateTimeFormatDescription" xml:space="preserve">
+    <value>Определите, как выводится время на канале. Обозначения: yyyy - годы, MM - месяцы, dd - дни, HH - часы, mm - минуты, ss - секунды, FF - миллисекунды. (http://msdn.microsoft.com/en-us/library/8kb3ddd4(VS.96).aspx)</value>
+  </data>
+  <data name="FlashingParams" xml:space="preserve">
+    <value>Режим мигания главного окна</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="IRCWindowSize" xml:space="preserve">
+    <value>Начальный размер окон IRC</value>
+  </data>
+  <data name="LogMode" xml:space="preserve">
+    <value>Тип логов</value>
+  </data>
+  <data name="LogModeDescription" xml:space="preserve">
+    <value>Влияет только на новые каналы</value>
+  </data>
+  <data name="OpenPrivateVisible" xml:space="preserve">
+    <value>Показывать команду открытия привата на сервере</value>
+  </data>
+  <data name="PlayMusic" xml:space="preserve">
+    <value>Играть мультимедиа по команде play</value>
+  </data>
+  <data name="PlayMusicDescription" xml:space="preserve">
+    <value>Играть медиафайлы и показывать изображения при получении на канале команды play белым цветом</value>
+  </data>
+  <data name="PrintForeColor" xml:space="preserve">
+    <value>Код цвета сообщений (от 0 до 98)</value>
+  </data>
+  <data name="PutRegisterMessage" xml:space="preserve">
+    <value>Команда авторизации</value>
+  </data>
+  <data name="PutRegisterMessageDescription" xml:space="preserve">
+    <value>Автоматически создавать команду для ввода пароля зарегистрированного ника</value>
+  </data>
+  <data name="QuitMessage" xml:space="preserve">
+    <value>Сообщение при выходе из программы</value>
+  </data>
+  <data name="ShowReadSplitters" xml:space="preserve">
+    <value>Отделять непрочитанный текст разделителем</value>
+  </data>
+  <data name="ShowReadSplittersDescription" xml:space="preserve">
+    <value>В неактивное окно чата будет добавляться дополнительная строка, отделяющая непрочитанные сообщения</value>
+  </data>
+  <data name="ShowUrlOnCmd" xml:space="preserve">
+    <value>Скачивать мультимедиа из сети по команде url</value>
+  </data>
+  <data name="ShowUrlOnCmdDescription" xml:space="preserve">
+    <value>Автоматически скачивать изображения, видео и аудио и показывать/проигрывать их при получении на канале команды url белым цветом</value>
+  </data>
+  <data name="Mask" xml:space="preserve">
+    <value>Маска</value>
+  </data>
+  <data name="Proxy" xml:space="preserve">
+    <value>Параметры прокси-сервера</value>
+  </data>
+  <data name="NotUsed" xml:space="preserve">
+    <value>Используется по умолчанию</value>
+  </data>
+  <data name="PingServer" xml:space="preserve">
+    <value>Дисконнект через</value>
+  </data>
+  <data name="PingServerDescription" xml:space="preserve">
+    <value>Сообщать о дисконнекте при неответе сервера в течение (с)</value>
+  </data>
+  <data name="WaitServer" xml:space="preserve">
+    <value>Пинговать сервер при его молчании более (с)</value>
+  </data>
+  <data name="WaitServerDescription" xml:space="preserve">
+    <value>0 отключает пингование</value>
+  </data>
+  <data name="SavePasswords" xml:space="preserve">
+    <value>Сохранять пароли зарегистрированных ников</value>
+  </data>
+  <data name="LogModeHtmlForum" xml:space="preserve">
+    <value>Html для форумов</value>
+  </data>
+  <data name="WithWords" xml:space="preserve">
+    <value>со словами: {0}</value>
+  </data>
+  <data name="FullUpdatesNew" xml:space="preserve">
+    <value>Обнаружено обновление программы до версии {0}. Будет произведена дополнительная установка. Загрузить обновление сейчас?</value>
+  </data>
+  <data name="icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

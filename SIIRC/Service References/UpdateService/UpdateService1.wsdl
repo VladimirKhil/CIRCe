@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UpdateService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/update?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/update?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vladimirkhil.com/services/update?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUpdateService_GetProductVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductVersion" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_GetProductVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_GetProductUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_GetProductUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_UpdateUsage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUsage" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_SendErrorReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorReport" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_SendErrorReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_SendErrorReportNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorReportNew" />
+  </wsdl:message>
+  <wsdl:message name="IUpdateService_SendErrorReportNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendErrorReportNewResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUpdateService">
+    <wsdl:operation name="GetProductVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateService/GetProductVersion" message="tns:IUpdateService_GetProductVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateService/GetProductVersionResponse" message="tns:IUpdateService_GetProductVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateService/GetProductUpdate" message="tns:IUpdateService_GetProductUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateService/GetProductUpdateResponse" message="tns:IUpdateService_GetProductUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateService/UpdateUsage" message="tns:IUpdateService_UpdateUsage_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendErrorReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateService/SendErrorReport" message="tns:IUpdateService_SendErrorReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateService/SendErrorReportResponse" message="tns:IUpdateService_SendErrorReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendErrorReportNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUpdateService/SendErrorReportNew" message="tns:IUpdateService_SendErrorReportNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUpdateService/SendErrorReportNewResponse" message="tns:IUpdateService_SendErrorReportNew_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUpdateService" type="tns:IUpdateService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductVersion">
+      <soap:operation soapAction="http://tempuri.org/IUpdateService/GetProductVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductUpdate">
+      <soap:operation soapAction="http://tempuri.org/IUpdateService/GetProductUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsage">
+      <soap:operation soapAction="http://tempuri.org/IUpdateService/UpdateUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SendErrorReport">
+      <soap:operation soapAction="http://tempuri.org/IUpdateService/SendErrorReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendErrorReportNew">
+      <soap:operation soapAction="http://tempuri.org/IUpdateService/SendErrorReportNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateService">
+    <wsdl:port name="BasicHttpBinding_IUpdateService" binding="tns:BasicHttpBinding_IUpdateService">
+      <soap:address location="http://vladimirkhil.com/services/update" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

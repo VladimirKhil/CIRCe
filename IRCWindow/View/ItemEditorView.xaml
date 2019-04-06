@@ -1,0 +1,45 @@
+﻿<Window x:Class="IRCWindow.View.ItemEditorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:cb="clr-namespace:CIRCe.Base;assembly=CIRCe.Base"
+        xmlns:cd="clr-namespace:IRCWindow.Data"
+        xmlns:cv="clr-namespace:IRCWindow.View" TextOptions.TextFormattingMode="Display"
+        xmlns:icb="clr-namespace:IRC.Client.Base;assembly=IRC.Client.Base"
+        mc:Ignorable="d" FontFamily="Segoe UI" FontSize="14" SizeToContent="Height" ShowInTaskbar="False" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" Icon="../Resources/logo.ico"
+        Background="#FFFAFAFA" Width="440" Language="ru-RU">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type cb:ExtendedServerInfo}">
+            <cv:ExtendedServerInfoView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type cb:ExtendedChannelInfo}">
+            <cv:ExtendedChannelInfoView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type cd:NickInfo}">
+            <cv:NickNameView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type icb:UserInfo}">
+            <cv:UserInfoView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type cb:MaskInfo}">
+            <cv:MaskView />
+        </DataTemplate>
+    </Window.Resources>
+    <StackPanel>
+        <ContentControl Content="{Binding}" Margin="5" />
+        <Button HorizontalAlignment="Right" Padding="45,2" Margin="5,0,7,7" IsDefault="True" Click="Button_Click" Content="OK">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="IsEnabled" Value="False" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Error}" Value="{x:Null}">
+                            <Setter Property="IsEnabled" Value="True" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </StackPanel>
+</Window>

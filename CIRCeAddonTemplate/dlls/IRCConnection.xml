@@ -1,0 +1,505 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IRCConnection</name>
+    </assembly>
+    <members>
+        <member name="T:IRCConnection.ChannelList">
+            <summary>
+            Список каналов
+            </summary>
+        </member>
+        <member name="T:IRCConnection.ConnectionInfo">
+            <summary>
+            Информация о подключении
+            </summary>
+        </member>
+        <member name="M:IRCConnection.ConnectionInfo.#ctor(IRCConnection.Server,IRCConnection.NickName)">
+            <summary>
+            Создание информации о подключении
+            </summary>
+            <param name="server">Сервер</param>
+            <param name="nick">Ник</param>
+        </member>
+        <member name="P:IRCConnection.ConnectionInfo.Server">
+            <summary>
+            Сервер
+            </summary>
+        </member>
+        <member name="P:IRCConnection.ConnectionInfo.Nick">
+            <summary>
+            Ник
+            </summary>
+        </member>
+        <member name="T:IRCConnection.ChannelInfo">
+            <summary>
+            Информация о канале
+            </summary>
+        </member>
+        <member name="T:IRCConnection.Channel">
+            <summary>
+            Канал
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IRCObject.Sticked">
+            <summary>
+            Закрепить в дереве
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IRCObject.AutoOpen">
+            <summary>
+            Автоматическое открытие окна при входе
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IChannel.Name">
+            <summary>
+            Имя канала
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Channel.#ctor">
+            <summary>
+            Создание канала
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Channel.#ctor(System.String)">
+            <summary>
+            Создание канала
+            </summary>
+            <param name="name">Имя канала</param>
+        </member>
+        <member name="M:IRCConnection.Channel.Clone">
+            <summary>
+            Клонировать канал
+            </summary>
+            <returns>Клон канала</returns>
+        </member>
+        <member name="P:IRCConnection.Channel.Name">
+            <summary>
+            Имя канала
+            </summary>
+        </member>
+        <member name="T:IRCConnection.ServerList">
+            <summary>
+            Спсиок серверов
+            </summary>
+        </member>
+        <member name="T:IRCConnection.INick">
+            <summary>
+            Ник в IRC
+            </summary>
+        </member>
+        <member name="P:IRCConnection.INick.Nick">
+            <summary>
+            Ник
+            </summary>
+        </member>
+        <member name="P:IRCConnection.INick.User">
+            <summary>
+            Информация о пользователе
+            </summary>
+        </member>
+        <member name="T:IRCConnection.IServer">
+            <summary>
+            Сервер в IRC
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IServer.Description">
+            <summary>
+            Описание сервера
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IServer.Name">
+            <summary>
+            Имя сервера
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IServer.Port">
+            <summary>
+            Номер порта
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IServer.Channels">
+            <summary>
+            Каналы сервера
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IServer.Passwords">
+            <summary>
+            Пароли ников на сервере
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Password.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Прочитать пароль из XML
+            </summary>
+            <param name="reader"></param>
+        </member>
+        <member name="M:IRCConnection.Password.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Сериализоваться в Xml
+            </summary>
+            <param name="writer">Оболочка потока сериализации</param>
+        </member>
+        <member name="T:IRCConnection.ConnectionInfoList">
+            <summary>
+            Список данных о подключении
+            </summary>
+        </member>
+        <member name="T:IRCConnection.Server">
+            <summary>
+            Сервер
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Server.#ctor">
+            <summary>
+            Создание нового сервера
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Server.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Создание сервера
+            </summary>
+            <param name="description">Описание</param>
+            <param name="name">Имя</param>
+            <param name="port">Номер порта</param>
+        </member>
+        <member name="M:IRCConnection.Server.ToString">
+            <summary>
+            Строковое представление сервера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IRCConnection.Server.Equals(System.Object)">
+            <summary>
+            Проверка на равенство сервера другому объекту
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IRCConnection.Server.GetHashCode">
+            <summary>
+            Хэш-код объекта
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:IRCConnection.Server.Clone">
+            <summary>
+            Создать копию сервера
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:IRCConnection.Server.Description">
+            <summary>
+            Описание сервера
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Server.Name">
+            <summary>
+            Имя сервера
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Server.Port">
+            <summary>
+            Номер порта
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Server.Channels">
+            <summary>
+            Каналы сервера
+            </summary>
+        </member>
+        <member name="T:IRCConnection.UserInfo">
+            <summary>
+            Подробная информация о пользователе
+            </summary>
+        </member>
+        <member name="T:IRCConnection.NickName">
+            <summary>
+            Ник
+            </summary>
+        </member>
+        <member name="M:IRCConnection.NickName.#ctor">
+            <summary>
+            Создание ника
+            </summary>
+        </member>
+        <member name="M:IRCConnection.NickName.#ctor(System.String)">
+            <summary>
+            Создание ника
+            </summary>
+            <param name="nick">Никнейм</param>
+        </member>
+        <member name="P:IRCConnection.NickName.Nick">
+            <summary>
+            Ник пользователя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.Server">
+            <summary>
+            Сервер, на котором расположен пользователь
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.ServerInfo">
+            <summary>
+            Информация о сервере
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.Modes">
+            <summary>
+            Режимы пользователя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.IsRegistered">
+            <summary>
+            Является ли ник зарегистрированным
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.IsIRCOp">
+            <summary>
+            Является ли оператором IRC
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.CodePage">
+            <summary>
+            Страница кодировки пользователя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.Idle">
+            <summary>
+            Время простоя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.IsBot">
+            <summary>
+            Является ли ботом
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.Auth">
+            <summary>
+            Подлинное имя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.UserInfo.Obsolete">
+            <summary>
+            Используется для устаревания информации о юзере
+            Информация считается устаревшей после прошествия некоторого числа секунд с момента получения
+            </summary>
+        </member>
+        <member name="T:IRCConnection.IUser">
+            <summary>
+            Юзер в IRC
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IUser.UserName">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IUser.Host">
+            <summary>
+            Хост
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IUser.Name">
+            <summary>
+            Реальное имя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IUser.EMail">
+            <summary>
+            EMail
+            </summary>
+        </member>
+        <member name="P:IRCConnection.IUser.FullName">
+            <summary>
+            Полное имя в IRC
+            </summary>
+        </member>
+        <member name="T:IRCConnection.Properties.Resources">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.ChannelName">
+            <summary>
+              Ищет локализованную строку, похожую на Имя канала.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.EMail">
+            <summary>
+              Ищет локализованную строку, похожую на Адрес электронной почты.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.Host">
+            <summary>
+              Ищет локализованную строку, похожую на Хост.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.Nick">
+            <summary>
+              Ищет локализованную строку, похожую на Ник.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.PortNumber">
+            <summary>
+              Ищет локализованную строку, похожую на Номер порта.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.RealName">
+            <summary>
+              Ищет локализованную строку, похожую на Реальное имя.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.ServerDescription">
+            <summary>
+              Ищет локализованную строку, похожую на Описание сервера.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.ServerName">
+            <summary>
+              Ищет локализованную строку, похожую на Имя сервера.
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Properties.Resources.UserName">
+            <summary>
+              Ищет локализованную строку, похожую на Пользователь.
+            </summary>
+        </member>
+        <member name="T:IRCConnection.NickList">
+            <summary>
+            Список ников
+            </summary>
+        </member>
+        <member name="T:IRCConnection.Connection">
+            <summary>
+            Подключение к IRC-серверу
+            </summary>
+        </member>
+        <member name="M:IRCConnection.Connection.#ctor(IRCConnection.ConnectionInfo,System.String,System.Boolean)">
+            <summary>
+            Создание бота
+            </summary>
+            <param name="name">Имя бота</param>
+        </member>
+        <member name="M:IRCConnection.Connection.Connect">
+            <summary>
+            Подкючение к серверу
+            </summary>
+            <param name="server">Целевой сервер</param>
+        </member>
+        <member name="M:IRCConnection.Connection.Say(System.String)">
+            <summary>
+            Сказать сообщение
+            </summary>
+            <param name="message">Текст сообщения</param>
+        </member>
+        <member name="M:IRCConnection.Connection.RunCmd(System.String[])">
+            <summary>
+            Выполнить команду
+            </summary>
+            <param name="list">Параметры команды</param>
+        </member>
+        <member name="M:IRCConnection.Connection.ReceiverCallback(System.IAsyncResult)">
+            <summary>
+            Получение входящего сообщения
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:IRCConnection.Connection.Dispose">
+            <summary>
+            Разрыв соединения
+            </summary>
+        </member>
+        <member name="E:IRCConnection.Connection.MessageReceived">
+            <summary>
+            Получено сообщение
+            </summary>
+        </member>
+        <member name="E:IRCConnection.Connection.Disposed">
+            <summary>
+            Бот ликвидирован
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Connection.Nick">
+            <summary>
+            Юзер
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Connection.Server">
+            <summary>
+            Сервер
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Connection.UsingServer">
+            <summary>
+            Имя сервера, с которым мы общаемся
+            </summary>
+        </member>
+        <member name="P:IRCConnection.Connection.Connected">
+            <summary>
+            Имеется ли сейчас подключение
+            </summary>
+        </member>
+        <member name="T:IRCConnection.Connection.ReceiveDel">
+            <summary>
+            Обработчик полученного сообщения с сервера
+            </summary>
+            <param name="m">Присланное сообщение</param>
+        </member>
+        <member name="T:IRCConnection.User">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="M:IRCConnection.User.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Создание нового пользователя
+            </summary>
+            <param name="user">Имя пользователя</param>
+            <param name="host">Имя хоста</param>
+            <param name="name">Реальное имя</param>
+        </member>
+        <member name="M:IRCConnection.User.#ctor(IRCConnection.User)">
+            <summary>
+            Создание нового пользователя на основе существующего
+            </summary>
+            <param name="user">Существующий пользователь</param>
+        </member>
+        <member name="P:IRCConnection.User.UserName">
+            <summary>
+            Пользователь
+            </summary>
+        </member>
+        <member name="P:IRCConnection.User.Host">
+            <summary>
+            Хост
+            </summary>
+        </member>
+        <member name="P:IRCConnection.User.Name">
+            <summary>
+            Реальное имя
+            </summary>
+        </member>
+        <member name="P:IRCConnection.User.EMail">
+            <summary>
+            EMail
+            </summary>
+        </member>
+        <member name="P:IRCConnection.User.Info">
+            <summary>
+            Дополнительные сведения
+            </summary>
+        </member>
+    </members>
+</doc>

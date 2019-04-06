@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<addons>
+  <addon>
+    <title>SIGame в IRC</title>
+    <description>Компонент для проведения SIGame в IRC</description>
+    <author>Vladimir Khil</author>
+    <date>03.11.2009</date>
+    <url>http://ur-quan1986.narod.ru/circe/SIIRC.exe</url>
+    <size>402 Kb</size>
+    <guid>6847ef93-40bb-4177-8717-4c370679cbac</guid>
+  </addon>
+</addons>

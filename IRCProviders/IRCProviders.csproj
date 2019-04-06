@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03EEB4D4-0B97-447E-A2F2-29834B6737F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRCProviders</RootNamespace>
+    <AssemblyName>IRCProviders</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\IRCProviders.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\IRCProviders.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddonInfo.cs" />
+    <None Include="AddonInfoList.cs" />
+    <Compile Include="CharCharDictionaryTypeConverter.cs" />
+    <Compile Include="Colors.cs" />
+    <Compile Include="ColorsTypeConverter.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="FlashParams.cs" />
+    <None Include="FormattedText.cs" />
+    <None Include="IBaseWindow.cs" />
+    <None Include="IChannelWindow.cs" />
+    <None Include="ICommunicationWindow.cs" />
+    <Compile Include="IContextMenuStrip.cs" />
+    <Compile Include="IDataRow.cs" />
+    <Compile Include="IFormNode.cs" />
+    <None Include="IRCAddon.cs" />
+    <Compile Include="IListView.cs" />
+    <Compile Include="IChannelUser.cs" />
+    <None Include="IMainWindow.cs" />
+    <Compile Include="IPanel.cs" />
+    <None Include="IPrivateWindow.cs" />
+    <Compile Include="IRCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IRCForm.Designer.cs">
+      <DependentUpon>IRCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRCMessage.cs" />
+    <Compile Include="IRCMessageEventArgs.cs" />
+    <Compile Include="LogProvidersList.cs" />
+    <None Include="IServerWindow.cs" />
+    <Compile Include="IWindowTree.cs" />
+    <None Include="JoinEventArgs.cs" />
+    <Compile Include="KeysStringDictionary.cs" />
+    <Compile Include="KeysStringDictionaryTypeConverter.cs" />
+    <Compile Include="LogProvider.cs" />
+    <Compile Include="MessageEventArgs.cs" />
+    <Compile Include="CharCharDictionary.cs" />
+    <Compile Include="PersonEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerializableKeyEventArgs.cs" />
+    <Compile Include="SerializableKeyPressedEventArgs.cs" />
+    <Compile Include="Special.cs" />
+    <Compile Include="TwoPersonsEventArgs.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="WindowInfo.cs" />
+    <Compile Include="WindowInfoList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IRCConnection\IRCConnection.csproj">
+      <Project>{A0C6DC55-6F11-41A7-9BEA-F7156FD69897}</Project>
+      <Name>IRCConnection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IRCForm.resx">
+      <DependentUpon>IRCForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
